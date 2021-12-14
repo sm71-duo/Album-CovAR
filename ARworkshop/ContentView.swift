@@ -38,6 +38,8 @@ struct ARViewContainer: UIViewRepresentable {
         arView.session.delegate = context.coordinator
         arView.session.run(config, options: [])
         
+        arView.addGestureRecognizer(UITapGestureRecognizer(target: context.coordinator, action: #selector(Coordinator.handleTap(recognizer:))))
+        
         return arView
         
     }
@@ -51,6 +53,14 @@ struct ARViewContainer: UIViewRepresentable {
         
         init(arView: ARView) {
             self.arView = arView
+        }
+        
+        @objc func handleTap(recognizer: UITapGestureRecognizer) {
+            let location = recognizer.location(in: arView)
+            
+            if let tappedEntity = arView.entity(at: location) {
+                print(tappedEntity.name)
+            }
         }
         
         func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
