@@ -24,9 +24,9 @@ struct ARViewContainer: UIViewRepresentable {
     }
     
     func makeUIView(context: Context) -> ARView {
-
+        
         let config = ARImageTrackingConfiguration();
-        config.maximumNumberOfTrackedImages = 1
+        config.maximumNumberOfTrackedImages = 2
         config.isAutoFocusEnabled = true
         
         guard let trackingImages = ARReferenceImage.referenceImages(inGroupNamed: "AR Resources", bundle: nil) else {
@@ -59,18 +59,14 @@ struct ARViewContainer: UIViewRepresentable {
             let location = recognizer.location(in: arView)
             
             if let tappedEntity = arView.entity(at: location) {
-                print(tappedEntity.name)
+                print("Tapped anchor with name \(tappedEntity.name)")
             }
         }
         
         func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
             for anchor in anchors {
                 if let imageAnchor = anchor as? ARImageAnchor {
-                    if imageAnchor.isTracked {
-                        avPlayer?.play()
-                    } else {
-                        avPlayer?.pause()
-                    }
+                    print("Updated anchor with name \(String(describing: imageAnchor.name) )")
                 }
             }
         }
@@ -85,16 +81,7 @@ struct ARViewContainer: UIViewRepresentable {
                     let width = Float(imageAnchor.referenceImage.physicalSize.width)
                     let height = Float(imageAnchor.referenceImage.physicalSize.height)
                     
-                    guard let videoUrl = Bundle.main.url(forResource: imageAnchor.name, withExtension: "mp4") else {
-                        fatalError("Video not found")
-                    }
-                    
-                    let playerItem = AVPlayerItem(url: videoUrl)
-                    avPlayer = AVPlayer(playerItem: playerItem)
-                    let videoMaterial = VideoMaterial(avPlayer: avPlayer!)
-                    
-                    
-                    let modelEntity = ModelEntity(mesh: .generatePlane(width: width, depth: height), materials: [videoMaterial])
+                    let modelEntity = ModelEntity(mesh: .generatePlane(width: width, depth: height), materials: [SimpleMaterial(color: .black, isMetallic: true)])
                     
                     anchorEntity.addChild(modelEntity)
                     
@@ -104,7 +91,7 @@ struct ARViewContainer: UIViewRepresentable {
             }
             
         }
-
+        
     }
     
 }
