@@ -37,7 +37,7 @@
 		A530FB3D276895C900553800 = {
 			isa = PBXGroup;
 			children = (
-				A530FB48276895C900553800 /* ARworkshop */,
+				A530FB48276895C900553800 /* AlbumCovAR */,
 				A530FB47276895C900553800 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,7 +50,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A530FB48276895C900553800 /* ARworkshop */ = {
+		A530FB48276895C900553800 /* AlbumCovAR */ = {
 			isa = PBXGroup;
 			children = (
 				A530FB49276895C900553800 /* AppDelegate.swift */,
@@ -59,7 +59,7 @@
 				A530FB4F276895CB00553800 /* Assets.xcassets */,
 				A530FB51276895CB00553800 /* Preview Content */,
 			);
-			path = ARworkshop;
+			path = AlbumCovAR;
 			sourceTree = "<group>";
 		};
 		A530FB51276895CB00553800 /* Preview Content */ = {
@@ -73,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A530FB45276895C900553800 /* ARworkshop */ = {
+		A530FB45276895C900553800 /* AlbumCovAR */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A530FB56276895CB00553800 /* Build configuration list for PBXNativeTarget "ARworkshop" */;
+			buildConfigurationList = A530FB56276895CB00553800 /* Build configuration list for PBXNativeTarget "AlbumCovAR" */;
 			buildPhases = (
 				A530FB42276895C900553800 /* Sources */,
 				A530FB43276895C900553800 /* Frameworks */,
@@ -85,7 +85,7 @@
 			);
 			dependencies = (
 			);
-			name = ARworkshop;
+			name = AlbumCovAR;
 			productName = ARworkshop;
 			productReference = A530FB46276895C900553800 /* Album CovAR.app */;
 			productType = "com.apple.product-type.application";
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A530FB41276895C900553800 /* Build configuration list for PBXProject "ARworkshop" */;
+			buildConfigurationList = A530FB41276895C900553800 /* Build configuration list for PBXProject "AlbumCovAR" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A530FB45276895C900553800 /* ARworkshop */,
+				A530FB45276895C900553800 /* AlbumCovAR */,
 			);
 		};
 /* End PBXProject section */
@@ -330,7 +330,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A530FB41276895C900553800 /* Build configuration list for PBXProject "ARworkshop" */ = {
+		A530FB41276895C900553800 /* Build configuration list for PBXProject "AlbumCovAR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A530FB54276895CB00553800 /* Debug */,
@@ -339,7 +339,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A530FB56276895CB00553800 /* Build configuration list for PBXNativeTarget "ARworkshop" */ = {
+		A530FB56276895CB00553800 /* Build configuration list for PBXNativeTarget "AlbumCovAR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A530FB57276895CB00553800 /* Debug */,
