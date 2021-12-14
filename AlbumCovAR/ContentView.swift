@@ -56,11 +56,10 @@ struct ARViewContainer: UIViewRepresentable {
         }
         
         @objc func handleTap(recognizer: UITapGestureRecognizer) {
-            print("yeet")
             let location = recognizer.location(in: arView)
             
             if let tappedEntity = arView.entity(at: location) {
-                print("got em, \(tappedEntity.name)")
+                print("Found album: \(tappedEntity.name)")
             }
         }
         
@@ -74,13 +73,11 @@ struct ARViewContainer: UIViewRepresentable {
                     let width = Float(imageAnchor.referenceImage.physicalSize.width)
                     let height = Float(imageAnchor.referenceImage.physicalSize.height)
                     
-                    var albumOverlay = SimpleMaterial(color: .lightGray.withAlphaComponent(0.0), isMetallic: false)
-                    
-//                    print(anchor.name)
-                    
-                    albumOverlay.color = try! .init( texture: .init(.load(named: "FlowerBoy", in: nil)))
-                    
-                    let albumEntity = ModelEntity(mesh: .generatePlane(width: width * 1.1, depth: height * 1.1, cornerRadius: 0.01), materials: [ albumOverlay])
+//                    var albumOverlay = SimpleMaterial()
+//
+//                    albumOverlay.color = try! .init( texture: .init(.load(named: "Ta13oo.png", in: nil)))
+//
+//                    let albumEntity = ModelEntity(mesh: .generatePlane(width: width * 1.1, depth: height * 1.1, cornerRadius: 0.01), materials: [ albumOverlay])
                     
                     let pressable = SimpleMaterial(color: .lightGray.withAlphaComponent(0.8), isMetallic: true)
                     
@@ -89,11 +86,11 @@ struct ARViewContainer: UIViewRepresentable {
                     
                     pressableEntity.generateCollisionShapes(recursive: true)
                     
-                    pressableEntity.name = "gangster"
+                    pressableEntity.name = anchor.name ?? "'no name found'"
                     
-                    anchorEntity.addChild(albumEntity)
+//                    anchorEntity.addChild(albumEntity)
                     
-                    //anchorEntity.addChild(pressableEntity)
+                    anchorEntity.addChild(pressableEntity)
                     
                     arView.scene.addAnchor(anchorEntity)
                 }
