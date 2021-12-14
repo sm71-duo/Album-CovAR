@@ -87,7 +87,6 @@ struct ARViewContainer: UIViewRepresentable {
                     
                     arView.scene.addAnchor(anchorEntity)
                 }
-                
             }
             
         }
