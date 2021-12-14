@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "christmascard.png",
+      "filename" : "flume.jpeg",
       "idiom" : "universal"
     }
   ],
@@ -10,6 +10,7 @@
     "version" : 1
   },
   "properties" : {
-    "width" : 0
+    "unit" : "centimeters",
+    "width" : 30
   }
 }
