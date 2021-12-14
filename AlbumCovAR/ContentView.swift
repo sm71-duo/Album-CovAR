@@ -56,21 +56,23 @@ struct ARViewContainer: UIViewRepresentable {
         }
         
         @objc func handleTap(recognizer: UITapGestureRecognizer) {
+            print("yeet")
             let location = recognizer.location(in: arView)
             
             if let tappedEntity = arView.entity(at: location) {
-                print("Tapped anchor with name \(tappedEntity.name)")
+                print("got em, \(tappedEntity.name)")
             }
         }
         
         func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
             for anchor in anchors {
                 if let imageAnchor = anchor as? ARImageAnchor {
-                    print("Updated anchor with name \(String(describing: imageAnchor.name) )")
+//                    print("Updated anchor with name \(String(describing: imageAnchor.name) )")
+                } else {
+                    print("Updated anchor not found")
                 }
             }
         }
-        
         func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
             
             for anchor in anchors {
@@ -81,7 +83,13 @@ struct ARViewContainer: UIViewRepresentable {
                     let width = Float(imageAnchor.referenceImage.physicalSize.width)
                     let height = Float(imageAnchor.referenceImage.physicalSize.height)
                     
-                    let modelEntity = ModelEntity(mesh: .generatePlane(width: width, depth: height), materials: [SimpleMaterial(color: .black, isMetallic: true)])
+                    let material = SimpleMaterial(color: .black, isMetallic: true)
+                    
+                    let modelEntity = ModelEntity(mesh: .generatePlane(width: width, depth: height), materials: [material])
+                    
+                    modelEntity.generateCollisionShapes(recursive: true)
+                                        
+                    modelEntity.name = "gangster"
                     
                     anchorEntity.addChild(modelEntity)
                     
