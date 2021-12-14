@@ -73,11 +73,12 @@ struct ARViewContainer: UIViewRepresentable {
                     let width = Float(imageAnchor.referenceImage.physicalSize.width)
                     let height = Float(imageAnchor.referenceImage.physicalSize.height)
                     
-//                    var albumOverlay = SimpleMaterial()
-//
-//                    albumOverlay.color = try! .init( texture: .init(.load(named: "Ta13oo.png", in: nil)))
-//
-//                    let albumEntity = ModelEntity(mesh: .generatePlane(width: width * 1.1, depth: height * 1.1, cornerRadius: 0.01), materials: [ albumOverlay])
+                    var albumOverlay = SimpleMaterial()
+
+                    albumOverlay.color = try! .init( texture: .init(.load(named: "\(anchor.name ?? "help")Album", in: nil)))
+
+                    let albumEntity = ModelEntity(mesh: .generatePlane(width: width * 1.1, depth: height * 1.1, cornerRadius: 0.01), materials: [ albumOverlay])
+                    
                     
                     let pressable = SimpleMaterial(color: .lightGray.withAlphaComponent(0.8), isMetallic: true)
                     
@@ -88,9 +89,9 @@ struct ARViewContainer: UIViewRepresentable {
                     
                     pressableEntity.name = anchor.name ?? "'no name found'"
                     
-//                    anchorEntity.addChild(albumEntity)
+                    anchorEntity.addChild(albumEntity)
                     
-                    anchorEntity.addChild(pressableEntity)
+//                    anchorEntity.addChild(pressableEntity)
                     
                     arView.scene.addAnchor(anchorEntity)
                 }
