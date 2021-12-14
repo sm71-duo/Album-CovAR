@@ -83,9 +83,9 @@ struct ARViewContainer: UIViewRepresentable {
                     let width = Float(imageAnchor.referenceImage.physicalSize.width)
                     let height = Float(imageAnchor.referenceImage.physicalSize.height)
                     
-                    let material = SimpleMaterial(color: .black, isMetallic: true)
+                    let material = SimpleMaterial(color: .lightGray.withAlphaComponent(0.8), isMetallic: true)
                     
-                    let modelEntity = ModelEntity(mesh: .generatePlane(width: width, depth: height), materials: [material])
+                    let modelEntity = ModelEntity(mesh: .generatePlane(width: width / 3, depth: height / 3, cornerRadius: width), materials: [material])
                     
                     modelEntity.generateCollisionShapes(recursive: true)
                                         
@@ -96,11 +96,8 @@ struct ARViewContainer: UIViewRepresentable {
                     arView.scene.addAnchor(anchorEntity)
                 }
             }
-            
         }
-        
     }
-    
 }
 
 #if DEBUG
