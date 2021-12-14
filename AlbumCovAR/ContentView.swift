@@ -64,15 +64,6 @@ struct ARViewContainer: UIViewRepresentable {
             }
         }
         
-        func session(_ session: ARSession, didUpdate anchors: [ARAnchor]) {
-            for anchor in anchors {
-                if let imageAnchor = anchor as? ARImageAnchor {
-//                    print("Updated anchor with name \(String(describing: imageAnchor.name) )")
-                } else {
-                    print("Updated anchor not found")
-                }
-            }
-        }
         func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
             
             for anchor in anchors {
@@ -83,15 +74,26 @@ struct ARViewContainer: UIViewRepresentable {
                     let width = Float(imageAnchor.referenceImage.physicalSize.width)
                     let height = Float(imageAnchor.referenceImage.physicalSize.height)
                     
-                    let material = SimpleMaterial(color: .lightGray.withAlphaComponent(0.8), isMetallic: true)
+                    var albumOverlay = SimpleMaterial(color: .lightGray.withAlphaComponent(0.0), isMetallic: false)
                     
-                    let modelEntity = ModelEntity(mesh: .generatePlane(width: width / 3, depth: height / 3, cornerRadius: width), materials: [material])
+//                    print(anchor.name)
                     
-                    modelEntity.generateCollisionShapes(recursive: true)
-                                        
-                    modelEntity.name = "gangster"
+                    albumOverlay.color = try! .init( texture: .init(.load(named: "FlowerBoy", in: nil)))
                     
-                    anchorEntity.addChild(modelEntity)
+                    let albumEntity = ModelEntity(mesh: .generatePlane(width: width * 1.1, depth: height * 1.1, cornerRadius: 0.01), materials: [ albumOverlay])
+                    
+                    let pressable = SimpleMaterial(color: .lightGray.withAlphaComponent(0.8), isMetallic: true)
+                    
+                    
+                    let pressableEntity = ModelEntity(mesh: .generatePlane(width: width / 4, depth: height / 4, cornerRadius: 9999), materials: [pressable])
+                    
+                    pressableEntity.generateCollisionShapes(recursive: true)
+                    
+                    pressableEntity.name = "gangster"
+                    
+                    anchorEntity.addChild(albumEntity)
+                    
+                    //anchorEntity.addChild(pressableEntity)
                     
                     arView.scene.addAnchor(anchorEntity)
                 }

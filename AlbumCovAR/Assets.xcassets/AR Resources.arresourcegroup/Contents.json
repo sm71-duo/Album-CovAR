@@ -5,10 +5,13 @@
   },
   "resources" : [
     {
-      "filename" : "currents.arreferenceimage"
+      "filename" : "Currents.arreferenceimage"
     },
     {
-      "filename" : "flume.arreferenceimage"
+      "filename" : "FlowerBoy.arreferenceimage"
+    },
+    {
+      "filename" : "Skin.arreferenceimage"
     }
   ]
 }
