@@ -27,6 +27,8 @@ struct BottomView: View {
                     .foregroundColor(.white)
                     .font(.title3)
                     .padding(.horizontal)
+                
+                Spacer()
             }
             
             ScrollView{
@@ -35,7 +37,7 @@ struct BottomView: View {
                 }
                 .listStyle(.plain)
             }
-            .frame(height: 200)
+            .frame(height: 150)
             
         }
         .padding(.vertical)
