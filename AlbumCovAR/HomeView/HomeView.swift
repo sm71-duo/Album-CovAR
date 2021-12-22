@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    let recentAlbums: [Album] = [
+        Album(name: "Flower Boy", artist: "Tyler, the Creator", coverImageName: "FlowerBoyAlbum"),
+        Album(name: "Sand", artist: "Balthazar", coverImageName: "SandAlbum"),
+        Album(name: "Skin", artist: "Flume", coverImageName: "SkinAlbum")
+    ]
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -15,19 +22,16 @@ struct HomeView: View {
                 VStack{
                     HeaderView()
                     
-                    
                     CenterView()
                     
                     Spacer()
                     
-                    BottomView()                    
+                    BottomView(albums: recentAlbums)
                 }
             }
             .navigationBarTitle("")
             .navigationBarHidden(true)
-
         }
-        
     }
 }
 

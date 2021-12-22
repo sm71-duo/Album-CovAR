@@ -19,7 +19,7 @@ struct HeaderView: View {
             Image("AppLogo")
                 .resizable()
                 .scaledToFit()
-                .frame(width: 250.0, height: 250.0)
+                .frame(width: 200, height: 200)
             Text("Welcome Back!")
                 .fontWeight(.bold)
                 .foregroundColor(.white)

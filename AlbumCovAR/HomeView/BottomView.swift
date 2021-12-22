@@ -9,15 +9,9 @@ import SwiftUI
 
 let gradientBorder = LinearGradient(gradient: Gradient(colors: [Color("CustomBlue"), Color("CustomLightBlue").opacity(0.0)]), startPoint: .top, endPoint: .bottom)
 
-
-
 struct BottomView: View {
     
-    let recentAlbums: [Album] = [
-        Album(name: "Flower Boy", artist: "Tyler, the Creator", coverImageName: "FlowerBoyAlbum"),
-        Album(name: "Sand", artist: "Balthazar", coverImageName: "SandAlbum"),
-        Album(name: "Skin", artist: "Flume", coverImageName: "SkinAlbum")
-    ]
+    var albums: [Album] = []
     
     var body: some View {
         VStack{
@@ -32,7 +26,7 @@ struct BottomView: View {
             }
             
             ScrollView{
-                ForEach(recentAlbums) {album in
+                ForEach(albums) {album in
                     AlbumComponentView(album: album)
                 }
                 .listStyle(.plain)
@@ -47,8 +41,6 @@ struct BottomView: View {
                 .stroke(gradientBorder, lineWidth: 4))
         .padding()
     }
-    
-    
 }
 
 struct BottomView_Previews: PreviewProvider {

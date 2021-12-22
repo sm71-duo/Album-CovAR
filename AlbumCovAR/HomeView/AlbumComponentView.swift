@@ -47,11 +47,6 @@ struct AlbumComponentView_Previews: PreviewProvider {
             Color("BackgroundColor").ignoresSafeArea()
             VStack {
                 AlbumComponentView(album: Album(name: "Flower Boy", artist: "Tyler, the Creator", coverImageName: "FlowerBoyAlbum"))
-                
-                AlbumComponentView(album: Album(name: "Sand", artist: "Balthazar", coverImageName: "SandAlbum"))
-                
-                AlbumComponentView(album: Album(name: "Skin", artist: "Flume", coverImageName: "SkinAlbum"))
-                
             }
         }
     }
