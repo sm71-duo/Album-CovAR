@@ -11,19 +11,16 @@ struct CenterView: View {
     var body: some View {
         VStack {
             NavigationLink(destination: ContentView()){
-                Button(action: {
-                    print("Pressed!")
-                }){
-                    Image(systemName: "camera")
-                        .font(.system(size: 24))
-                        .frame(width: 56, height: 56)
-                        .foregroundColor(Color("CustomYellow"))
-                        .background(Color("CustomBlue"))
-                        .clipShape(Circle())
-                }
-                .buttonStyle(PlainButtonStyle())
-                .padding()
+                Image(systemName: "camera")
+                    .font(.system(size: 24))
+                    .frame(width: 56, height: 56)
+                    .foregroundColor(Color("CustomYellow"))
+                    .background(Color("CustomBlue"))
+                    .clipShape(Circle())
             }
+            .buttonStyle(PlainButtonStyle())
+            .padding()
+            
             NavigationLink(destination: ContentView()){
                 Text("Start scanning")
                     .foregroundColor(.white)
