@@ -11,7 +11,9 @@ import ARKit
 
 struct ContentView : View {
     var body: some View {
-        return ARViewContainer().edgesIgnoringSafeArea(.all)
+        NavigationView {
+            return ARViewContainer().edgesIgnoringSafeArea(.all)
+        }
     }
 }
 
