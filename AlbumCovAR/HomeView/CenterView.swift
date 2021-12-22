@@ -10,22 +10,25 @@ import SwiftUI
 struct CenterView: View {
     var body: some View {
         VStack {
-            Button(action: {
-                print("Pressed!")
-            }){
-                Image(systemName: "camera")
-                    .font(.system(size: 24))
-                    .frame(width: 56, height: 56)
-                    .foregroundColor(Color("CustomYellow"))
-                    .background(Color("CustomBlue"))
-                    .clipShape(Circle())
+            NavigationLink(destination: ContentView()){
+                Button(action: {
+                    print("Pressed!")
+                }){
+                    Image(systemName: "camera")
+                        .font(.system(size: 24))
+                        .frame(width: 56, height: 56)
+                        .foregroundColor(Color("CustomYellow"))
+                        .background(Color("CustomBlue"))
+                        .clipShape(Circle())
+                }
+                .buttonStyle(PlainButtonStyle())
+                .padding()
             }
-            .buttonStyle(PlainButtonStyle())
-            .padding()
-            
-            Text("Start scanning")
-                .foregroundColor(.white)
-                .font(.headline)
+            NavigationLink(destination: ContentView()){
+                Text("Start scanning")
+                    .foregroundColor(.white)
+                    .font(.headline)
+            }
         }
     }
 }
