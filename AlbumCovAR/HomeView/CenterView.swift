@@ -9,12 +9,33 @@ import SwiftUI
 
 struct CenterView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Button(action: {
+                print("Pressed!")
+            }){
+                Image(systemName: "camera")
+                    .font(.system(size: 24))
+                    .frame(width: 56, height: 56)
+                    .foregroundColor(Color("CustomYellow"))
+                    .background(Color("CustomBlue"))
+                    .clipShape(Circle())
+            }
+            .buttonStyle(PlainButtonStyle())
+            .padding()
+            
+            Text("Start scanning")
+                .foregroundColor(.white)
+                .font(.headline)
+        }
     }
 }
 
+
 struct CenterView_Previews: PreviewProvider {
     static var previews: some View {
-        CenterView()
+        ZStack {
+            Color("BackgroundColor").ignoresSafeArea()
+            CenterView()
+        }
     }
 }
