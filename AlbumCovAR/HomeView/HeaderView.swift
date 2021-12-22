@@ -7,14 +7,36 @@
 
 import SwiftUI
 
-struct Header: View {
+struct HeaderView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Album covAR")
+                .fontWeight(.bold)
+                .foregroundColor(.white)
+                .font(.title)
+                .multilineTextAlignment(.center)
+            
+            Image("AppLogo")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 250.0, height: 250.0)
+            Text("Welcome Back!")
+                .fontWeight(.bold)
+                .foregroundColor(.white)
+                .font(.title2)
+                .multilineTextAlignment(.center)
+                
+        }
     }
 }
 
-struct Header_Previews: PreviewProvider {
+struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        Header()
+        ZStack{
+            
+        
+        Color("BackgroundColor").ignoresSafeArea()
+        HeaderView()
+        }
     }
 }
