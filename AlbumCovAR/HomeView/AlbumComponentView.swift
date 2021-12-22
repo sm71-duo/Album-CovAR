@@ -8,10 +8,36 @@
 import SwiftUI
 
 struct AlbumComponentView: View {
+    
+    var album: Album
+    
     var body: some View {
         HStack {
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            HStack {
+                Image(album.coverImageName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 40, height: 40)
+                
+                VStack(alignment: .leading) {Text(album.name)
+                        .foregroundColor(Color("White"))
+                        .font(.headline)
+                        .padding(.horizontal)
+                    Text(album.artist)
+                        .foregroundColor(Color("White"))
+                        .font(.subheadline)
+                    .padding(.horizontal)}
+            }
+            
+            Spacer()
+            
+            Image(systemName: "chevron.right")
+                .font(.system(size: 24))
+                .frame(width: 56, height: 56)
+                .foregroundColor(Color("White"))
         }
+        .padding(.horizontal)
+        .listRowBackground(Color("BackgroundColor"))
     }
 }
 
@@ -19,7 +45,14 @@ struct AlbumComponentView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color("BackgroundColor").ignoresSafeArea()
-            AlbumComponentView()
+            VStack {
+                AlbumComponentView(album: Album(name: "Flower Boy", artist: "Tyler, the Creator", coverImageName: "FlowerBoyAlbum"))
+                
+                AlbumComponentView(album: Album(name: "Sand", artist: "Balthazar", coverImageName: "SandAlbum"))
+                
+                AlbumComponentView(album: Album(name: "Skin", artist: "Flume", coverImageName: "SkinAlbum"))
+                
+            }
         }
     }
 }
