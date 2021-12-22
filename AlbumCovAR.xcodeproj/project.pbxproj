@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14EB030E277320DA00E9C5C9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB030D277320DA00E9C5C9 /* HomeView.swift */; };
+		14EB03112773322800E9C5C9 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB03102773322800E9C5C9 /* HeaderView.swift */; };
+		14EB03132773345700E9C5C9 /* CenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB03122773345700E9C5C9 /* CenterView.swift */; };
+		14EB03152773383400E9C5C9 /* BottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB03142773383400E9C5C9 /* BottomView.swift */; };
+		14EB031727733EDE00E9C5C9 /* AlbumComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB031627733EDD00E9C5C9 /* AlbumComponentView.swift */; };
+		14EB031A2773552B00E9C5C9 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB03192773552B00E9C5C9 /* Album.swift */; };
+		14EB031C2773625800E9C5C9 /* AlbumCovarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB031B2773625800E9C5C9 /* AlbumCovarApp.swift */; };
 		A530FB4A276895C900553800 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530FB49276895C900553800 /* AppDelegate.swift */; };
 		A530FB4C276895C900553800 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530FB4B276895C900553800 /* ContentView.swift */; };
 		A530FB4E276895C900553800 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A530FB4D276895C900553800 /* Experience.rcproject */; };
@@ -15,6 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		14EB030D277320DA00E9C5C9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		14EB03102773322800E9C5C9 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		14EB03122773345700E9C5C9 /* CenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterView.swift; sourceTree = "<group>"; };
+		14EB03142773383400E9C5C9 /* BottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomView.swift; sourceTree = "<group>"; };
+		14EB031627733EDD00E9C5C9 /* AlbumComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumComponentView.swift; sourceTree = "<group>"; };
+		14EB03192773552B00E9C5C9 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		14EB031B2773625800E9C5C9 /* AlbumCovarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCovarApp.swift; sourceTree = "<group>"; };
 		A530FB46276895C900553800 /* Album CovAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Album CovAR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A530FB49276895C900553800 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A530FB4B276895C900553800 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -34,6 +48,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14EB030F2773316A00E9C5C9 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				14EB030D277320DA00E9C5C9 /* HomeView.swift */,
+				14EB03142773383400E9C5C9 /* BottomView.swift */,
+				14EB03122773345700E9C5C9 /* CenterView.swift */,
+				14EB03102773322800E9C5C9 /* HeaderView.swift */,
+				14EB031627733EDD00E9C5C9 /* AlbumComponentView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		14EB03182773551E00E9C5C9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14EB03192773552B00E9C5C9 /* Album.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		A530FB3D276895C900553800 = {
 			isa = PBXGroup;
 			children = (
@@ -53,8 +87,11 @@
 		A530FB48276895C900553800 /* AlbumCovAR */ = {
 			isa = PBXGroup;
 			children = (
+				14EB03182773551E00E9C5C9 /* Models */,
 				A530FB49276895C900553800 /* AppDelegate.swift */,
+				14EB031B2773625800E9C5C9 /* AlbumCovarApp.swift */,
 				A530FB4B276895C900553800 /* ContentView.swift */,
+				14EB030F2773316A00E9C5C9 /* HomeView */,
 				A530FB4D276895C900553800 /* Experience.rcproject */,
 				A530FB4F276895CB00553800 /* Assets.xcassets */,
 				A530FB51276895CB00553800 /* Preview Content */,
@@ -140,7 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14EB03112773322800E9C5C9 /* HeaderView.swift in Sources */,
+				14EB031C2773625800E9C5C9 /* AlbumCovarApp.swift in Sources */,
+				14EB03132773345700E9C5C9 /* CenterView.swift in Sources */,
+				14EB031727733EDE00E9C5C9 /* AlbumComponentView.swift in Sources */,
 				A530FB4C276895C900553800 /* ContentView.swift in Sources */,
+				14EB030E277320DA00E9C5C9 /* HomeView.swift in Sources */,
+				14EB031A2773552B00E9C5C9 /* Album.swift in Sources */,
+				14EB03152773383400E9C5C9 /* BottomView.swift in Sources */,
 				A530FB4A276895C900553800 /* AppDelegate.swift in Sources */,
 				A530FB4E276895C900553800 /* Experience.rcproject in Sources */,
 			);
@@ -281,6 +325,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -293,7 +338,7 @@
 				PRODUCT_NAME = "Album CovAR";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -313,6 +358,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -325,7 +371,7 @@
 				PRODUCT_NAME = "Album CovAR";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
