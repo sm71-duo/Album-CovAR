@@ -534,11 +534,97 @@ extension Album {
             )
         ),
         Album(
-            name: "Hi, this is Flume",
+            name: "Hi This Is Flume (Mixtape)",
             artist: "Flume",
             coverImageName: "HiThisIsFlumeAlbum",
             tracklist: Tracklist(
-                songs: []
+                songs: [
+                    Song(
+                        name: "Hi This is Flume",
+                        artist: ["Flume"],
+                        trackNumber: 1
+                    ),
+                    Song(
+                        name: "Ecdysis",
+                        artist: ["Flume"],
+                        trackNumber: 2
+                    ),
+                    Song(
+                        name: "High Beams",
+                        artist: ["Flume", "HWLS", "slowthai"],
+                        trackNumber: 3
+                    ),
+                    Song(
+                        name: "Jewel",
+                        artist: ["Flume"],
+                        trackNumber: 4
+                    ),
+                    Song(
+                        name: "╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌╫§╜φ°⌂▌",
+                        artist: ["Flume"],
+                        trackNumber: 5
+                    ),
+                    Song(
+                        name: "Dreamtime",
+                        artist: ["Flume"],
+                        trackNumber: 6
+                    ),
+                    Song(
+                        name: "Is It Cold In The Water? - Flume & Eprom Remix",
+                        artist: ["Flume", "SOPHIE", "Eprom"],
+                        trackNumber: 7
+                    ),
+                    Song(
+                        name: "How To Build A Relationship",
+                        artist: ["Flume", "JPEGMAFIA"],
+                        trackNumber: 8
+                    ),
+                    Song(
+                        name: "Wormhole",
+                        artist: ["Flume"],
+                        trackNumber: 9
+                    ),
+                    Song(
+                        name: "Voices",
+                        artist: ["Flume", "KUČKA", "SOPHIE"],
+                        trackNumber: 10
+                    ),
+                    Song(
+                        name: "MUD",
+                        artist: ["Flume"],
+                        trackNumber: 11
+                    ),
+                    Song(
+                        name: "Upgrade",
+                        artist: ["Flume"],
+                        trackNumber: 12
+                    ),
+                    Song(
+                        name: "71m3",
+                        artist: ["Flume"],
+                        trackNumber: 13
+                    ),
+                    Song(
+                        name: "Vitality",
+                        artist: ["Flume"],
+                        trackNumber: 14
+                    ),
+                    Song(
+                        name: "Daze 22.00",
+                        artist: ["Flume"],
+                        trackNumber: 15
+                    ),
+                    Song(
+                        name: "Amber",
+                        artist: ["Flume"],
+                        trackNumber: 16
+                    ),
+                    Song(
+                        name: "Spring",
+                        artist: ["Flume", "Eprom"],
+                        trackNumber: 17
+                    ),
+                ]
             )
         )
     ]
