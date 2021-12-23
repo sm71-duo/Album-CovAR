@@ -11,26 +11,26 @@ import ARKit
 
 struct AlbumARView : View {
     @State private var showBottomSheet = false
-    let arView = ARViewContainer()
+    @State private var albumTitle = ""
     
     let testAlbum = Album.sampleData[2]
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            arView.edgesIgnoringSafeArea(.all)
+            ARViewContainer(albumTitle: $albumTitle, showBottomSheet: $showBottomSheet).edgesIgnoringSafeArea(.all)
 
             Button(action: {
                 withAnimation {
                     self.showBottomSheet.toggle()
                 }
             }) {
-                Text("Show modal")
+                Text("\(albumTitle)")
                     .font(.title)
                     .bold()
                     .foregroundColor(.black)
             }
             BottomSheetModal(display: $showBottomSheet, backgroundColor: testAlbum.avgColor) {
-                AlbumModalView(album: testAlbum)
+                AlbumModalView(album: Album.sampleData.first(where: {$0.name == albumTitle}) ?? testAlbum)
             }
         }
     }
@@ -39,9 +39,11 @@ struct AlbumARView : View {
 struct ARViewContainer: UIViewRepresentable {
 
     let arView = ARView(frame: .zero)
+    let albumTitle: Binding<String>
+    let showBottomSheet: Binding<Bool>
 
     func makeCoordinator() -> Coordinator {
-        Coordinator(arView: arView)
+        Coordinator(arView: arView, albumTitleState: albumTitle, showBottomSheetState: showBottomSheet)
     }
 
     func makeUIView(context: Context) -> ARView {
@@ -70,15 +72,21 @@ struct ARViewContainer: UIViewRepresentable {
     class Coordinator: NSObject, ARSessionDelegate {
 
         let arView: ARView!
+        let albumTitle: Binding<String>
+        let showBottomSheet: Binding<Bool>
 
-        init(arView: ARView) {
+        init(arView: ARView, albumTitleState: Binding<String>, showBottomSheetState: Binding<Bool>) {
             self.arView = arView
+            self.albumTitle = albumTitleState
+            self.showBottomSheet = showBottomSheetState
         }
 
         @objc func handleTap(recognizer: UITapGestureRecognizer) {
             let location = recognizer.location(in: arView)
 
             if let tappedEntity = arView.entity(at: location) {
+                showBottomSheet.wrappedValue = true
+                albumTitle.wrappedValue = tappedEntity.name
                 print("Found album: \(tappedEntity.name)")
             }
         }
@@ -96,14 +104,15 @@ struct ARViewContainer: UIViewRepresentable {
                     albumOverlay.color = try! .init( texture: .init(.load(named: "\(anchor.name ?? "help") Cover", in: nil)))
                     let albumEntity = ModelEntity(mesh: .generatePlane(width: width * 1.1, depth: height * 1.1, cornerRadius: 0.01), materials: [albumOverlay])
                     albumEntity.name = anchor.name ?? "'no name found'"
-                    albumEntity.generateCollisionShapes(recursive: true)
+//                    albumEntity.generateCollisionShapes(recursive: true)
 
-//                    let pressable = SimpleMaterial(color: .lightGray.withAlphaComponent(0.8), isMetallic: true)
-//                    let pressableEntity = ModelEntity(mesh: .generatePlane(width: width / 4, depth: height / 4, cornerRadius: 9999), materials: [pressable])
-//                    pressableEntity.generateCollisionShapes(recursive: true)
-//                    pressableEntity.name = anchor.name ?? "'no name found'"
-//                    pressableEntity.setPosition(SIMD3<Float>(0, 0.05, 0), relativeTo: anchorEntity)
+                    let pressable = SimpleMaterial(color: .lightGray.withAlphaComponent(0.0), isMetallic: true)
+                    let pressableEntity = ModelEntity(mesh: .generatePlane(width: width / 4, depth: height / 4, cornerRadius: 9999), materials: [pressable])
+                    pressableEntity.generateCollisionShapes(recursive: true)
+                    pressableEntity.name = anchor.name ?? "'no name found'"
+                    pressableEntity.setPosition(SIMD3<Float>(0, 0.05, 0), relativeTo: anchorEntity)
 
+                    anchorEntity.addChild(pressableEntity)
                     anchorEntity.addChild(albumEntity)
                     arView.scene.addAnchor(anchorEntity)
 

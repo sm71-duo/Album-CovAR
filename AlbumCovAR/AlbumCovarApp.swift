@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct AlbumCovarApp: App {
+    
+    
     var body: some Scene {
         WindowGroup {
             AlbumARView()
