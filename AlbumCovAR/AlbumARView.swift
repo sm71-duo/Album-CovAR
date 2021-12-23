@@ -80,7 +80,6 @@ struct ARViewContainer: UIViewRepresentable {
 
             if let tappedEntity = arView.entity(at: location) {
                 print("Found album: \(tappedEntity.name)")
-                tappedEntity.removeFromParent()
             }
         }
 
@@ -97,14 +96,13 @@ struct ARViewContainer: UIViewRepresentable {
                     albumOverlay.color = try! .init( texture: .init(.load(named: "\(anchor.name ?? "help")Album", in: nil)))
                     let albumEntity = ModelEntity(mesh: .generatePlane(width: width * 1.1, depth: height * 1.1, cornerRadius: 0.01), materials: [albumOverlay])
 
-                    let pressable = SimpleMaterial(color: .lightGray.withAlphaComponent(0.8), isMetallic: true)
-                    let pressableEntity = ModelEntity(mesh: .generatePlane(width: width / 4, depth: height / 4, cornerRadius: 9999), materials: [pressable])
-                    pressableEntity.generateCollisionShapes(recursive: true)
-                    pressableEntity.name = anchor.name ?? "'no name found'"
-                    pressableEntity.setPosition(SIMD3<Float>(0, 0.05, 0), relativeTo: anchorEntity)
+//                    let pressable = SimpleMaterial(color: .lightGray.withAlphaComponent(0.8), isMetallic: true)
+//                    let pressableEntity = ModelEntity(mesh: .generatePlane(width: width / 4, depth: height / 4, cornerRadius: 9999), materials: [pressable])
+//                    pressableEntity.generateCollisionShapes(recursive: true)
+//                    pressableEntity.name = anchor.name ?? "'no name found'"
+//                    pressableEntity.setPosition(SIMD3<Float>(0, 0.05, 0), relativeTo: anchorEntity)
 
                     anchorEntity.addChild(albumEntity)
-                    anchorEntity.addChild(pressableEntity)
 
                     arView.scene.addAnchor(anchorEntity)
 
