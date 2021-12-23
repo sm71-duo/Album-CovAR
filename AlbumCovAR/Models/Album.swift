@@ -12,12 +12,14 @@ struct Album: Identifiable {
     var name: String
     var artist: String
     var coverImageName: String
+    var avgColorHex: String
     var tracklist: Tracklist
     
-    init(name: String, artist: String, coverImageName: String, tracklist: Tracklist) {
+    init(name: String, artist: String, coverImageName: String, avgColorHex: String, tracklist: Tracklist) {
         self.name = name
         self.artist = artist
         self.coverImageName = coverImageName
+        self.avgColorHex = avgColorHex
         self.tracklist = tracklist
     }
 }
@@ -29,6 +31,7 @@ extension Album {
             name: "Flower Boy",
             artist: "Tyler, the Creator",
             coverImageName: "FlowerBoyAlbum",
+            avgColorHex: "#B67022",
             tracklist: Tracklist(
                 songs: [
                     Song(
@@ -108,6 +111,7 @@ extension Album {
             name: "Sand",
             artist: "Balthazar",
             coverImageName: "SandAlbum",
+            avgColorHex: "#9A9A99",
             tracklist: Tracklist(
                 songs: [
                     Song(
@@ -172,6 +176,7 @@ extension Album {
             name: "Skin",
             artist: "Flume",
             coverImageName: "SkinAlbum",
+            avgColorHex: "#A67CA7",
             tracklist: Tracklist(
                 songs: [
                     Song(
@@ -261,6 +266,7 @@ extension Album {
             name: "DAMN.",
             artist: "Kendrick Lamar",
             coverImageName: "DamnAlbum",
+            mainColor: "#95717d",
             tracklist: Tracklist(
                 songs: [
                     Song(
@@ -340,6 +346,7 @@ extension Album {
             name: "For Ever",
             artist: "Jungle",
             coverImageName: "ForEverAlbum",
+            avgColorHex: "#d6a13a",
             tracklist: Tracklist(
                 songs: [
                     Song(
@@ -414,6 +421,7 @@ extension Album {
             name: "Loving In Stereo",
             artist: "Jungle",
             coverImageName: "LovingInStereoAlbum",
+            avgColorHex: "#ccc3b5",
             tracklist: Tracklist(
                 songs: [
                     Song(
@@ -493,6 +501,7 @@ extension Album {
             name: "KIDS SEE GHOSTS",
             artist: "KIDS SEE GHOSTS",
             coverImageName: "KidsSeeGhostsAlbum",
+            avgColorHex: "#af9691",
             tracklist: Tracklist(
                 songs: [
                     Song(
@@ -537,6 +546,7 @@ extension Album {
             name: "Hi This Is Flume (Mixtape)",
             artist: "Flume",
             coverImageName: "HiThisIsFlumeAlbum",
+            avgColorHex: "7f6e48",
             tracklist: Tracklist(
                 songs: [
                     Song(
