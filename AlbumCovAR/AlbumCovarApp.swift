@@ -11,9 +11,7 @@ import SwiftUI
 struct AlbumCovarApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationView {
-                HomeView()
-            }
+            AlbumARView()
         }
     }
 }

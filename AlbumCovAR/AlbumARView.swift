@@ -95,6 +95,8 @@ struct ARViewContainer: UIViewRepresentable {
                     var albumOverlay = SimpleMaterial()
                     albumOverlay.color = try! .init( texture: .init(.load(named: "\(anchor.name ?? "help") Cover", in: nil)))
                     let albumEntity = ModelEntity(mesh: .generatePlane(width: width * 1.1, depth: height * 1.1, cornerRadius: 0.01), materials: [albumOverlay])
+                    albumEntity.name = anchor.name ?? "'no name found'"
+                    albumEntity.generateCollisionShapes(recursive: true)
 
 //                    let pressable = SimpleMaterial(color: .lightGray.withAlphaComponent(0.8), isMetallic: true)
 //                    let pressableEntity = ModelEntity(mesh: .generatePlane(width: width / 4, depth: height / 4, cornerRadius: 9999), materials: [pressable])
@@ -103,7 +105,6 @@ struct ARViewContainer: UIViewRepresentable {
 //                    pressableEntity.setPosition(SIMD3<Float>(0, 0.05, 0), relativeTo: anchorEntity)
 
                     anchorEntity.addChild(albumEntity)
-
                     arView.scene.addAnchor(anchorEntity)
 
                 }
