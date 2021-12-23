@@ -18,7 +18,6 @@ struct CenterView: View {
                     .background(Color("CustomBlue"))
                     .clipShape(Circle())
             }
-            .buttonStyle(PlainButtonStyle())
             .padding()
             
             NavigationLink(destination: AlbumARView()){
