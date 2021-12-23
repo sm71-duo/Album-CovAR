@@ -262,7 +262,78 @@ extension Album {
             artist: "Kendrick Lamar",
             coverImageName: "DamnAlbum",
             tracklist: Tracklist(
-                songs: []
+                songs: [
+                    Song(
+                        name: "BLOOD.",
+                        artist: ["Kendrick Lamar"],
+                        trackNumber: 1
+                    ),
+                    Song(
+                        name: "DNA.",
+                        artist: ["Kendrick Lamar"],
+                        trackNumber: 2
+                    ),
+                    Song(
+                        name: "YAH.",
+                        artist: ["Kendrick Lamar"],
+                        trackNumber: 3
+                    ),
+                    Song(
+                        name: "ELEMENT.",
+                        artist: ["Kendrick Lamar"],
+                        trackNumber: 4
+                    ),
+                    Song(
+                        name: "FEEL.",
+                        artist: ["Kendrick Lamar"],
+                        trackNumber: 5
+                    ),
+                    Song(
+                        name: "LOYALTY.",
+                        artist: ["Kendrick Lamar", "Rihanna"],
+                        trackNumber: 6
+                    ),
+                    Song(
+                        name: "PRIDE.",
+                        artist: ["Kendrick Lamar"],
+                        trackNumber: 7
+                    ),
+                    Song(
+                        name: "HUMBLE.",
+                        artist: ["Kendrick Lamar"],
+                        trackNumber: 8
+                    ),
+                    Song(
+                        name: "LUST.",
+                        artist: ["Kendrick Lamar"],
+                        trackNumber: 9
+                    ),
+                    Song(
+                        name: "LOVE.",
+                        artist: ["Kendrick Lamar", "Zacari"],
+                        trackNumber: 10
+                    ),
+                    Song(
+                        name: "XXX.",
+                        artist: ["Kendrick Lamar", "U2"],
+                        trackNumber: 11
+                    ),
+                    Song(
+                        name: "FEAR.",
+                        artist: ["Kendrick Lamar"],
+                        trackNumber: 12
+                    ),
+                    Song(
+                        name: "GOD.",
+                        artist: ["Kendrick Lamar"],
+                        trackNumber: 13
+                    ),
+                    Song(
+                        name: "DUCKWORTH.",
+                        artist: ["Kendrick Lamar"],
+                        trackNumber: 14
+                    )
+                ]
             )
         ),
         Album(
