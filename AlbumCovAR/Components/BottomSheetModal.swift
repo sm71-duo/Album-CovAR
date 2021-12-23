@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BottomSheetModal<Content: View>: View {
 
-  private let modalHeight: CGFloat = 360
+  private let modalHeight: CGFloat = 500
   private let modalWidth: CGFloat = UIScreen.main.bounds.width
   private let modalCornerRadius: CGFloat = 10
   private let backgroundOpacity = 0.65
@@ -17,6 +17,7 @@ struct BottomSheetModal<Content: View>: View {
 
   @State private var offset = CGSize.zero
   @Binding var display: Bool
+    var backgroundColor: Color
 
   var content: () -> Content
 
@@ -42,7 +43,7 @@ struct BottomSheetModal<Content: View>: View {
       self.content()
     }
     .frame(width: modalWidth, height: modalHeight, alignment: .top)
-    .background(Color.white)
+    .background(backgroundColor)
     .cornerRadius(modalCornerRadius)
     .offset(y: offset.height)
     .gesture(
@@ -83,7 +84,7 @@ struct DragIndicator: View {
 
   var body: some View {
     Rectangle()
-      .fill(Color.black)
+      .fill(Color.white)
       .frame(width: width, height: height)
       .cornerRadius(cornerRadius)
   }
@@ -91,7 +92,7 @@ struct DragIndicator: View {
 
 struct BottomSheetModal_Previews: PreviewProvider {
     static var previews: some View {
-      BottomSheetModal(display: .constant(true)) {
+        BottomSheetModal(display: .constant(true), backgroundColor: .white) {
         Text("Bottom Sheet Modal")
           .font(Font.system(.headline))
           .foregroundColor(Color.white)

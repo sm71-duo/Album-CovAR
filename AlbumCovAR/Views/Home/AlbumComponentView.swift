@@ -46,7 +46,7 @@ struct AlbumComponentView_Previews: PreviewProvider {
         ZStack {
             Color("BackgroundColor").ignoresSafeArea()
             VStack {
-                AlbumComponentView(album: Album(name: "Flower Boy", artist: "Tyler, the Creator", coverImageName: "FlowerBoyAlbum"))
+                AlbumComponentView(album: Album.sampleData[0])
             }
         }
     }

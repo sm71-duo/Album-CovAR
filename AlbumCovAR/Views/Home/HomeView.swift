@@ -9,11 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
-    let recentAlbums: [Album] = [
-        Album(name: "Flower Boy", artist: "Tyler, the Creator", coverImageName: "FlowerBoyAlbum"),
-        Album(name: "Sand", artist: "Balthazar", coverImageName: "SandAlbum"),
-        Album(name: "Skin", artist: "Flume", coverImageName: "SkinAlbum")
-    ]
+    let recentAlbums: [Album] = Album.sampleData
     
     var body: some View {
         ZStack {

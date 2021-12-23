@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Album: Identifiable {
     var id = UUID()
@@ -13,6 +14,7 @@ struct Album: Identifiable {
     var artist: String
     var coverImageName: String
     var avgColorHex: String
+    var avgColor: Color
     var tracklist: Tracklist
     
     init(name: String, artist: String, coverImageName: String, avgColorHex: String, tracklist: Tracklist) {
@@ -20,8 +22,30 @@ struct Album: Identifiable {
         self.artist = artist
         self.coverImageName = coverImageName
         self.avgColorHex = avgColorHex
+        self.avgColor = hexStringToUIColor(hex: avgColorHex)
         self.tracklist = tracklist
     }
+}
+
+func hexStringToUIColor (hex:String) -> Color {
+    var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+
+    if (cString.hasPrefix("#")) {
+        cString.remove(at: cString.startIndex)
+    }
+
+    if ((cString.count) != 6) {
+        return Color.gray
+    }
+
+    var rgbValue:UInt64 = 0
+    Scanner(string: cString).scanHexInt64(&rgbValue)
+
+    return Color(
+        red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
+        green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
+        blue: CGFloat(rgbValue & 0x0000FF) / 255.0
+    )
 }
 
 extension Album {

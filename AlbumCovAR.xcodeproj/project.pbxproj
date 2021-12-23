@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		14784ACC27747F680071E1D2 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14784ACB27747F680071E1D2 /* Song.swift */; };
 		14784ACE27747F750071E1D2 /* Tracklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14784ACD27747F750071E1D2 /* Tracklist.swift */; };
+		14784AD027749DC90071E1D2 /* AlbumModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14784ACF27749DC90071E1D2 /* AlbumModalView.swift */; };
 		14EB030E277320DA00E9C5C9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB030D277320DA00E9C5C9 /* HomeView.swift */; };
 		14EB03112773322800E9C5C9 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB03102773322800E9C5C9 /* HeaderView.swift */; };
 		14EB03132773345700E9C5C9 /* CenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB03122773345700E9C5C9 /* CenterView.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		14784ACB27747F680071E1D2 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		14784ACD27747F750071E1D2 /* Tracklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracklist.swift; sourceTree = "<group>"; };
+		14784ACF27749DC90071E1D2 /* AlbumModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModalView.swift; sourceTree = "<group>"; };
 		14EB030D277320DA00E9C5C9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		14EB03102773322800E9C5C9 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		14EB03122773345700E9C5C9 /* CenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterView.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				14EB030F2773316A00E9C5C9 /* Views */,
 				A530FB4F276895CB00553800 /* Assets.xcassets */,
 				A530FB51276895CB00553800 /* Preview Content */,
+				14784ACF27749DC90071E1D2 /* AlbumModalView.swift */,
 			);
 			path = AlbumCovAR;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				14EB031727733EDE00E9C5C9 /* AlbumComponentView.swift in Sources */,
 				A530FB4C276895C900553800 /* AlbumARView.swift in Sources */,
 				A5A5D98D27747A8900E01A7E /* BottomSheetModal.swift in Sources */,
+				14784AD027749DC90071E1D2 /* AlbumModalView.swift in Sources */,
 				14EB030E277320DA00E9C5C9 /* HomeView.swift in Sources */,
 				14EB031A2773552B00E9C5C9 /* Album.swift in Sources */,
 				14EB03152773383400E9C5C9 /* BottomView.swift in Sources */,
@@ -337,7 +341,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AlbumCovAR/Preview Content\"";
-				DEVELOPMENT_TEAM = B879SG39YQ;
+				DEVELOPMENT_TEAM = 42Q89H448D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
@@ -370,7 +374,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AlbumCovAR/Preview Content\"";
-				DEVELOPMENT_TEAM = B879SG39YQ;
+				DEVELOPMENT_TEAM = 42Q89H448D;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
