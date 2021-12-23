@@ -266,7 +266,7 @@ extension Album {
             name: "DAMN.",
             artist: "Kendrick Lamar",
             coverImageName: "DamnAlbum",
-            mainColor: "#95717d",
+            avgColorHex: "#95717d",
             tracklist: Tracklist(
                 songs: [
                     Song(
