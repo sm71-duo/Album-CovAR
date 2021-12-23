@@ -494,7 +494,43 @@ extension Album {
             artist: "KIDS SEE GHOSTS",
             coverImageName: "KidsSeeGhostsAlbum",
             tracklist: Tracklist(
-                songs: []
+                songs: [
+                    Song(
+                        name: "Feel The Love",
+                        artist: ["KIDS SEE GHOSTS", "Pusha T"],
+                        trackNumber: 1
+                    ),
+                    Song(
+                        name: "Fire",
+                        artist: ["KIDS SEE GHOSTS"],
+                        trackNumber: 2
+                    ),
+                    Song(
+                        name: "4th Dimension",
+                        artist: ["KIDS SEE GHOSTS", "Louis Prima"],
+                        trackNumber: 3
+                    ),
+                    Song(
+                        name: "Freeee (Ghost Town Pt. 2)",
+                        artist: ["KIDS SEE GHOSTS", "Ty Dolla $ign"],
+                        trackNumber: 4
+                    ),
+                    Song(
+                        name: "Reborn",
+                        artist: ["KIDS SEE GHOSTS"],
+                        trackNumber: 5
+                    ),
+                    Song(
+                        name: "Kids See Ghosts",
+                        artist: ["KIDS SEE GHOSTS", "Yasiin Bey"],
+                        trackNumber: 6
+                    ),
+                    Song(
+                        name: "Cudi Montage",
+                        artist: ["KIDS SEE GHOSTS"],
+                        trackNumber: 7
+                    )
+                ]
             )
         ),
         Album(
