@@ -258,7 +258,7 @@ extension Album {
             )
         ),
         Album(
-            name: "Damn",
+            name: "DAMN.",
             artist: "Kendrick Lamar",
             coverImageName: "DamnAlbum",
             tracklist: Tracklist(
@@ -341,7 +341,73 @@ extension Album {
             artist: "Jungle",
             coverImageName: "ForEverAlbum",
             tracklist: Tracklist(
-                songs: []
+                songs: [
+                    Song(
+                        name: "Smile",
+                        artist: ["Jungle"],
+                        trackNumber: 1
+                    ),
+                    Song(
+                        name: "Heavy, California",
+                        artist: ["Jungle"],
+                        trackNumber: 2
+                    ),
+                    Song(
+                        name: "Beat 54 (All Good Now)",
+                        artist: ["Jungle"],
+                        trackNumber: 3
+                    ),
+                    Song(
+                        name: "Cherry",
+                        artist: ["Jungle"],
+                        trackNumber: 4
+                    ),
+                    Song(
+                        name: "Happy Man",
+                        artist: ["Jungle"],
+                        trackNumber: 5
+                    ),
+                    Song(
+                        name: "Casio",
+                        artist: ["Jungle"],
+                        trackNumber: 6
+                    ),
+                    Song(
+                        name: "Mama Oh No",
+                        artist: ["Jungle"],
+                        trackNumber: 7
+                    ),
+                    Song(
+                        name: "House In LA",
+                        artist: ["Jungle"],
+                        trackNumber: 8
+                    ),
+                    Song(
+                        name: "Give Over",
+                        artist: ["Jungle"],
+                        trackNumber: 9
+                    ),
+                    Song(
+                        name: "Cosurmyne",
+                        artist: ["Jungle"],
+                        trackNumber: 10
+                    ),
+                    Song(
+                        name: "Home",
+                        artist: ["Jungle"],
+                        trackNumber: 11
+                    ),
+                    Song(
+                        name: "(More and More) It Ain't Easy",
+                        artist: ["Jungle"],
+                        trackNumber: 12
+                    ),
+                    Song(
+                        name: "Pray",
+                        artist: ["Jungle"],
+                        trackNumber: 13
+                    ),
+                ]
             )
         ),
         Album(
