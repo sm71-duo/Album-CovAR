@@ -9,7 +9,7 @@ import SwiftUI
 import RealityKit
 import ARKit
 
-struct ContentView : View {
+struct AlbumARView : View {
     var body: some View {
         ARViewContainer().edgesIgnoringSafeArea(.all)
     }
@@ -96,7 +96,7 @@ struct ARViewContainer: UIViewRepresentable {
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AlbumARView()
     }
 }
 #endif

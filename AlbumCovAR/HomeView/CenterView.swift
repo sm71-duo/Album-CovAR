@@ -10,7 +10,7 @@ import SwiftUI
 struct CenterView: View {
     var body: some View {
         VStack {
-            NavigationLink(destination: ContentView()){
+            NavigationLink(destination: AlbumARView()){
                 Image(systemName: "camera")
                     .font(.system(size: 24))
                     .frame(width: 56, height: 56)
@@ -21,7 +21,7 @@ struct CenterView: View {
             .buttonStyle(PlainButtonStyle())
             .padding()
             
-            NavigationLink(destination: ContentView()){
+            NavigationLink(destination: AlbumARView()){
                 Text("Start scanning")
                     .foregroundColor(.white)
                     .font(.headline)

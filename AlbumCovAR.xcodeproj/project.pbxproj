@@ -15,7 +15,7 @@
 		14EB031A2773552B00E9C5C9 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB03192773552B00E9C5C9 /* Album.swift */; };
 		14EB031C2773625800E9C5C9 /* AlbumCovarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB031B2773625800E9C5C9 /* AlbumCovarApp.swift */; };
 		A530FB4A276895C900553800 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530FB49276895C900553800 /* AppDelegate.swift */; };
-		A530FB4C276895C900553800 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530FB4B276895C900553800 /* ContentView.swift */; };
+		A530FB4C276895C900553800 /* AlbumARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530FB4B276895C900553800 /* AlbumARView.swift */; };
 		A530FB4E276895C900553800 /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = A530FB4D276895C900553800 /* Experience.rcproject */; };
 		A530FB50276895CB00553800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A530FB4F276895CB00553800 /* Assets.xcassets */; };
 		A530FB53276895CB00553800 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A530FB52276895CB00553800 /* Preview Assets.xcassets */; };
@@ -31,7 +31,7 @@
 		14EB031B2773625800E9C5C9 /* AlbumCovarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCovarApp.swift; sourceTree = "<group>"; };
 		A530FB46276895C900553800 /* Album CovAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Album CovAR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A530FB49276895C900553800 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A530FB4B276895C900553800 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A530FB4B276895C900553800 /* AlbumARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumARView.swift; sourceTree = "<group>"; };
 		A530FB4D276895C900553800 /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		A530FB4F276895CB00553800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A530FB52276895CB00553800 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 				14EB03182773551E00E9C5C9 /* Models */,
 				A530FB49276895C900553800 /* AppDelegate.swift */,
 				14EB031B2773625800E9C5C9 /* AlbumCovarApp.swift */,
-				A530FB4B276895C900553800 /* ContentView.swift */,
+				A530FB4B276895C900553800 /* AlbumARView.swift */,
 				14EB030F2773316A00E9C5C9 /* HomeView */,
 				A530FB4D276895C900553800 /* Experience.rcproject */,
 				A530FB4F276895CB00553800 /* Assets.xcassets */,
@@ -181,7 +181,7 @@
 				14EB031C2773625800E9C5C9 /* AlbumCovarApp.swift in Sources */,
 				14EB03132773345700E9C5C9 /* CenterView.swift in Sources */,
 				14EB031727733EDE00E9C5C9 /* AlbumComponentView.swift in Sources */,
-				A530FB4C276895C900553800 /* ContentView.swift in Sources */,
+				A530FB4C276895C900553800 /* AlbumARView.swift in Sources */,
 				14EB030E277320DA00E9C5C9 /* HomeView.swift in Sources */,
 				14EB031A2773552B00E9C5C9 /* Album.swift in Sources */,
 				14EB03152773383400E9C5C9 /* BottomView.swift in Sources */,
