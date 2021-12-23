@@ -16,22 +16,20 @@ struct HomeView: View {
     ]
     
     var body: some View {
-        NavigationView {
-            ZStack {
-                Color("BackgroundColor").ignoresSafeArea()
-                VStack{
-                    HeaderView()
-                    
-                    CenterView()
-                    
-                    Spacer()
-                    
-                    BottomView(albums: recentAlbums)
-                }
+        ZStack {
+            Color("BackgroundColor").ignoresSafeArea()
+            VStack{
+                HeaderView()
+                
+                CenterView()
+                
+                Spacer()
+                
+                BottomView(albums: recentAlbums)
             }
-            .navigationBarTitle("")
-            .navigationBarHidden(true)
         }
+        .navigationBarTitle("")
+        .navigationBarHidden(true)
     }
 }
 
