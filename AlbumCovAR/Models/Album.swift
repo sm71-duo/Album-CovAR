@@ -109,7 +109,63 @@ extension Album {
             artist: "Balthazar",
             coverImageName: "SandAlbum",
             tracklist: Tracklist(
-                songs: []
+                songs: [
+                    Song(
+                        name: "Moment",
+                        artist: ["Balthazar"],
+                        trackNumber: 1
+                    ),
+                    Song(
+                        name: "Losers",
+                        artist: ["Balthazar"],
+                        trackNumber: 2
+                    ),
+                    Song(
+                        name: "On A Roll",
+                        artist: ["Balthazar"],
+                        trackNumber: 3
+                    ),
+                    Song(
+                        name: "I Want You",
+                        artist: ["Balthazar"],
+                        trackNumber: 4
+                    ),
+                    Song(
+                        name: "You Won't Come Around",
+                        artist: ["Balthazar"],
+                        trackNumber: 5
+                    ),
+                    Song(
+                        name: "Linger On",
+                        artist: ["Balthazar"],
+                        trackNumber: 6
+                    ),
+                    Song(
+                        name: "Hourglass",
+                        artist: ["Balthazar"],
+                        trackNumber: 7
+                    ),
+                    Song(
+                        name: "Passing Through",
+                        artist: ["Balthazar"],
+                        trackNumber: 8
+                    ),
+                    Song(
+                        name: "Leaving Antwerp",
+                        artist: ["Balthazar"],
+                        trackNumber: 9
+                    ),
+                    Song(
+                        name: "Halfway",
+                        artist: ["Balthazar"],
+                        trackNumber: 10
+                    ),
+                    Song(
+                        name: "Powerless",
+                        artist: ["Balthazar"],
+                        trackNumber: 11
+                    )
+                ]
             )
         ),
         Album(
