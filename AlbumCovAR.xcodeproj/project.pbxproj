@@ -19,6 +19,7 @@
 		A530FB4C276895C900553800 /* AlbumARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530FB4B276895C900553800 /* AlbumARView.swift */; };
 		A530FB50276895CB00553800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A530FB4F276895CB00553800 /* Assets.xcassets */; };
 		A530FB53276895CB00553800 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A530FB52276895CB00553800 /* Preview Assets.xcassets */; };
+		A5A5D98D27747A8900E01A7E /* BottomSheetModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A5D98C27747A8900E01A7E /* BottomSheetModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		A530FB4B276895C900553800 /* AlbumARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumARView.swift; sourceTree = "<group>"; };
 		A530FB4F276895CB00553800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A530FB52276895CB00553800 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A5A5D98C27747A8900E01A7E /* BottomSheetModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,16 +50,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		14EB030F2773316A00E9C5C9 /* HomeView */ = {
+		14EB030F2773316A00E9C5C9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				14EB030D277320DA00E9C5C9 /* HomeView.swift */,
-				14EB03142773383400E9C5C9 /* BottomView.swift */,
-				14EB03122773345700E9C5C9 /* CenterView.swift */,
-				14EB03102773322800E9C5C9 /* HeaderView.swift */,
-				14EB031627733EDD00E9C5C9 /* AlbumComponentView.swift */,
+				A5A5D98E27747B1200E01A7E /* Home */,
 			);
-			path = HomeView;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		14EB03182773551E00E9C5C9 /* Models */ = {
@@ -89,10 +87,11 @@
 		A530FB48276895C900553800 /* AlbumCovAR */ = {
 			isa = PBXGroup;
 			children = (
+				A5A5D98B27747A7300E01A7E /* Components */,
 				14EB03182773551E00E9C5C9 /* Models */,
 				14EB031B2773625800E9C5C9 /* AlbumCovarApp.swift */,
 				A530FB4B276895C900553800 /* AlbumARView.swift */,
-				14EB030F2773316A00E9C5C9 /* HomeView */,
+				14EB030F2773316A00E9C5C9 /* Views */,
 				A530FB4F276895CB00553800 /* Assets.xcassets */,
 				A530FB51276895CB00553800 /* Preview Content */,
 			);
@@ -105,6 +104,26 @@
 				A530FB52276895CB00553800 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A5A5D98B27747A7300E01A7E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A5A5D98C27747A8900E01A7E /* BottomSheetModal.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A5A5D98E27747B1200E01A7E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				14EB030D277320DA00E9C5C9 /* HomeView.swift */,
+				14EB03142773383400E9C5C9 /* BottomView.swift */,
+				14EB03122773345700E9C5C9 /* CenterView.swift */,
+				14EB03102773322800E9C5C9 /* HeaderView.swift */,
+				14EB031627733EDD00E9C5C9 /* AlbumComponentView.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +203,7 @@
 				14EB03132773345700E9C5C9 /* CenterView.swift in Sources */,
 				14EB031727733EDE00E9C5C9 /* AlbumComponentView.swift in Sources */,
 				A530FB4C276895C900553800 /* AlbumARView.swift in Sources */,
+				A5A5D98D27747A8900E01A7E /* BottomSheetModal.swift in Sources */,
 				14EB030E277320DA00E9C5C9 /* HomeView.swift in Sources */,
 				14EB031A2773552B00E9C5C9 /* Album.swift in Sources */,
 				14EB03152773383400E9C5C9 /* BottomView.swift in Sources */,
@@ -338,7 +358,7 @@
 				PRODUCT_NAME = "Album CovAR";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -371,7 +391,7 @@
 				PRODUCT_NAME = "Album CovAR";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

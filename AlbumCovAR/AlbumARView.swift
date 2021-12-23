@@ -10,8 +10,30 @@ import RealityKit
 import ARKit
 
 struct AlbumARView : View {
+    @State private var showBottomSheet = false
+    let arView = ARViewContainer()
+    
     var body: some View {
-        ARViewContainer().edgesIgnoringSafeArea(.all)
+        ZStack(alignment: .bottomLeading) {
+            arView.edgesIgnoringSafeArea(.all)
+
+            Button(action: {
+                withAnimation {
+                    self.showBottomSheet.toggle()
+                }
+            }) {
+                Text("Show modal")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.black)
+            }
+            
+            BottomSheetModal(display: $showBottomSheet) {
+                Text("Show your content")
+                    .font(Font.system(.headline))
+                    .foregroundColor(Color.black)
+            }
+        }
     }
 }
 
