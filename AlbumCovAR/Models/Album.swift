@@ -100,8 +100,7 @@ extension Album {
                         name: "Enjoy Right Now, Today",
                         artist: ["Tyler, The Creator", "Jaden"],
                         trackNumber: 14
-                    ),
-                    
+                    )
                 ]
             )
         ),
@@ -118,7 +117,88 @@ extension Album {
             artist: "Flume",
             coverImageName: "SkinAlbum",
             tracklist: Tracklist(
-                songs: []
+                songs: [
+                    Song(
+                        name: "Helix",
+                        artist: ["Flume"],
+                        trackNumber: 1
+                    ),
+                    Song(
+                        name: "Never Be Like You",
+                        artist: ["Flume", "Kai"],
+                        trackNumber: 2
+                    ),
+                    Song(
+                        name: "Lose It",
+                        artist: ["Flume", "VIC MENSA"],
+                        trackNumber: 3
+                    ),
+                    Song(
+                        name: "Numb & Getting Colder",
+                        artist: ["Flume", "KUČKA"],
+                        trackNumber: 4
+                    ),
+                    Song(
+                        name: "Say It",
+                        artist: ["Flume", "Tove Lo"],
+                        trackNumber: 5
+                    ),
+                    Song(
+                        name: "Wall Fuck",
+                        artist: ["Flume"],
+                        trackNumber: 6
+                    ),
+                    Song(
+                        name: "Pika",
+                        artist: ["Flume"],
+                        trackNumber: 7
+                    ),
+                    Song(
+                        name: "Smake & Retrobution",
+                        artist: ["Flume", "Vic Stapbles", "KUČKA"],
+                        trackNumber: 8
+                    ),
+                    Song(
+                        name: "3",
+                        artist: ["Flume"],
+                        trackNumber: 9
+                    ),
+                    Song(
+                        name: "When Everything Was New",
+                        artist: ["Flume"],
+                        trackNumber: 10
+                    ),
+                    Song(
+                        name: "You Know",
+                        artist: ["Flume", "Allan Kingdom", "Raekwon"],
+                        trackNumber: 11
+                    ),
+                    Song(
+                        name: "Take a Chance",
+                        artist: ["Flume", "Little Dragon"],
+                        trackNumber: 12
+                    ),
+                    Song(
+                        name: "Innocence",
+                        artist: ["Flume", "AlunaGeroge"],
+                        trackNumber: 13
+                    ),
+                    Song(
+                        name: "Like Water",
+                        artist: ["Flume", "MNDR"],
+                        trackNumber: 14
+                    ),
+                    Song(
+                        name: "Free",
+                        artist: ["Flume"],
+                        trackNumber: 15
+                    ),
+                    Song(
+                        name: "Tiny Cities",
+                        artist: ["Flume", "Beck"],
+                        trackNumber: 16
+                    ),
+                ]
             )
         ),
         Album(
