@@ -94,7 +94,7 @@ struct ARViewContainer: UIViewRepresentable {
                     let height = Float(imageAnchor.referenceImage.physicalSize.height)
 
                     var albumOverlay = SimpleMaterial()
-                    albumOverlay.color = try! .init( texture: .init(.load(named: "\(anchor.name ?? "help")Album", in: nil)))
+                    albumOverlay.color = try! .init( texture: .init(.load(named: "\(anchor.name ?? "help") Cover", in: nil)))
                     let albumEntity = ModelEntity(mesh: .generatePlane(width: width * 1.1, depth: height * 1.1, cornerRadius: 0.01), materials: [albumOverlay])
 
                     let pressable = SimpleMaterial(color: .lightGray.withAlphaComponent(0.8), isMetallic: true)

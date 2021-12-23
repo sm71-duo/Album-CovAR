@@ -54,7 +54,7 @@ extension Album {
         Album(
             name: "Flower Boy",
             artist: "Tyler, the Creator",
-            coverImageName: "FlowerBoyAlbum",
+            coverImageName: "Flower Boy Cover",
             avgColorHex: "#B67022",
             tracklist: Tracklist(
                 songs: [
@@ -134,7 +134,7 @@ extension Album {
         Album(
             name: "Sand",
             artist: "Balthazar",
-            coverImageName: "SandAlbum",
+            coverImageName: "Sand Cover",
             avgColorHex: "#9A9A99",
             tracklist: Tracklist(
                 songs: [
@@ -199,7 +199,7 @@ extension Album {
         Album(
             name: "Skin",
             artist: "Flume",
-            coverImageName: "SkinAlbum",
+            coverImageName: "Skin Cover",
             avgColorHex: "#A67CA7",
             tracklist: Tracklist(
                 songs: [
@@ -289,7 +289,7 @@ extension Album {
         Album(
             name: "DAMN.",
             artist: "Kendrick Lamar",
-            coverImageName: "DamnAlbum",
+            coverImageName: "DAMN. Cover",
             avgColorHex: "#95717d",
             tracklist: Tracklist(
                 songs: [
@@ -369,7 +369,7 @@ extension Album {
         Album(
             name: "For Ever",
             artist: "Jungle",
-            coverImageName: "ForEverAlbum",
+            coverImageName: "For Ever Cover",
             avgColorHex: "#d6a13a",
             tracklist: Tracklist(
                 songs: [
@@ -444,7 +444,7 @@ extension Album {
         Album(
             name: "Loving In Stereo",
             artist: "Jungle",
-            coverImageName: "LovingInStereoAlbum",
+            coverImageName: "Loving In Stereo Cover",
             avgColorHex: "#ccc3b5",
             tracklist: Tracklist(
                 songs: [
@@ -524,7 +524,7 @@ extension Album {
         Album(
             name: "KIDS SEE GHOSTS",
             artist: "KIDS SEE GHOSTS",
-            coverImageName: "KidsSeeGhostsAlbum",
+            coverImageName: "KIDS SEE GHOSTS Cover",
             avgColorHex: "#af9691",
             tracklist: Tracklist(
                 songs: [
@@ -569,7 +569,7 @@ extension Album {
         Album(
             name: "Hi This Is Flume (Mixtape)",
             artist: "Flume",
-            coverImageName: "HiThisIsFlumeAlbum",
+            coverImageName: "Hi This Is Flume Cover",
             avgColorHex: "7f6e48",
             tracklist: Tracklist(
                 songs: [
