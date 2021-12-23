@@ -39,11 +39,11 @@ struct AlbumARView : View {
 struct ARViewContainer: UIViewRepresentable {
 
     let arView = ARView(frame: .zero)
-    let albumTitle: Binding<String>
-    let showBottomSheet: Binding<Bool>
+    @Binding var albumTitle: String
+    @Binding var showBottomSheet: Bool
 
     func makeCoordinator() -> Coordinator {
-        Coordinator(arView: arView, albumTitleState: albumTitle, showBottomSheetState: showBottomSheet)
+        Coordinator(arView: arView, albumTitleState: $albumTitle, showBottomSheetState: $showBottomSheet)
     }
 
     func makeUIView(context: Context) -> ARView {
@@ -57,7 +57,7 @@ struct ARViewContainer: UIViewRepresentable {
         }
 
         config.trackingImages = trackingImages
-
+        
         arView.session.delegate = context.coordinator
         arView.session.run(config, options: [])
 
@@ -72,21 +72,21 @@ struct ARViewContainer: UIViewRepresentable {
     class Coordinator: NSObject, ARSessionDelegate {
 
         let arView: ARView!
-        let albumTitle: Binding<String>
-        let showBottomSheet: Binding<Bool>
+        @Binding var albumTitle: String
+        @Binding var showBottomSheet: Bool
 
         init(arView: ARView, albumTitleState: Binding<String>, showBottomSheetState: Binding<Bool>) {
             self.arView = arView
-            self.albumTitle = albumTitleState
-            self.showBottomSheet = showBottomSheetState
+            _albumTitle = albumTitleState
+            _showBottomSheet = showBottomSheetState
         }
 
         @objc func handleTap(recognizer: UITapGestureRecognizer) {
             let location = recognizer.location(in: arView)
 
             if let tappedEntity = arView.entity(at: location) {
-                showBottomSheet.wrappedValue = true
-                albumTitle.wrappedValue = tappedEntity.name
+                self.showBottomSheet = true
+                self.albumTitle = tappedEntity.name
                 print("Found album: \(tappedEntity.name)")
             }
         }
