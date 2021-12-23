@@ -415,7 +415,78 @@ extension Album {
             artist: "Jungle",
             coverImageName: "LovingInStereoAlbum",
             tracklist: Tracklist(
-                songs: []
+                songs: [
+                    Song(
+                        name: "Dry Your Tears",
+                        artist: ["Jungle"],
+                        trackNumber: 1
+                    ),
+                    Song(
+                        name: "Keep Moving",
+                        artist: ["Jungle"],
+                        trackNumber: 2
+                    ),
+                    Song(
+                        name: "All Of The Time",
+                        artist: ["Jungle"],
+                        trackNumber: 3
+                    ),
+                    Song(
+                        name: "Romeo",
+                        artist: ["Jungle", "Bas"],
+                        trackNumber: 4
+                    ),
+                    Song(
+                        name: "Lifting You",
+                        artist: ["Jungle"],
+                        trackNumber: 5
+                    ),
+                    Song(
+                        name: "Bonnie Hill",
+                        artist: ["Jungle"],
+                        trackNumber: 6
+                    ),
+                    Song(
+                        name: "Fire",
+                        artist: ["Jungle"],
+                        trackNumber: 7
+                    ),
+                    Song(
+                        name: "Talk About It",
+                        artist: ["Jungle"],
+                        trackNumber: 8
+                    ),
+                    Song(
+                        name: "No Rules",
+                        artist: ["Jungle"],
+                        trackNumber: 9
+                    ),
+                    Song(
+                        name: "Truth",
+                        artist: ["Jungle"],
+                        trackNumber: 10
+                    ),
+                    Song(
+                        name: "What D'You Know About Me?",
+                        artist: ["Jungle"],
+                        trackNumber: 11
+                    ),
+                    Song(
+                        name: "Just Fly, Don't Worry",
+                        artist: ["Jungle"],
+                        trackNumber: 12
+                    ),
+                    Song(
+                        name: "Goodbye My Love",
+                        artist: ["Jungle", "Priya Ragu"],
+                        trackNumber: 13
+                    ),
+                    Song(
+                        name: "Can't Stop The Stars",
+                        artist: ["Jungle"],
+                        trackNumber: 14
+                    )
+                ]
             )
         ),
         Album(
