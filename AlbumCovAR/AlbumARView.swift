@@ -9,36 +9,40 @@ import SwiftUI
 import RealityKit
 import ARKit
 
+class AlbumARViewViewModel : ObservableObject {
+    @Published var showBottomSheet: Bool = false
+    @Published var albumTitle: String = ""
+}
+
 struct AlbumARView : View {
-    @State private var showBottomSheet = false
-    @State  var albumTitle = ""
+    @StateObject var viewModel = AlbumARViewViewModel()
     
     let testAlbum = Album.sampleData[2]
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            ARViewContainer(albumTitle: $albumTitle, showBottomSheet: $showBottomSheet).edgesIgnoringSafeArea(.all)
+            ARViewContainer(albumTitle: $viewModel.albumTitle, showBottomSheet: $viewModel.showBottomSheet).edgesIgnoringSafeArea(.all)
             
             Button(action: {
                 withAnimation {
-                    self.showBottomSheet.toggle()
+                    self.viewModel.showBottomSheet.toggle()
                 }
             }) {
-                Text("\(albumTitle)")
+                Text("\(viewModel.albumTitle)")
                     .font(.title)
                     .bold()
                     .foregroundColor(.black)
             }
-            BottomSheetModal(display: $showBottomSheet, backgroundColor: testAlbum.avgColor) {
-                AlbumModalView(album: Album.sampleData.first(where: {$0.name == albumTitle}) ?? testAlbum)
+            BottomSheetModal(display: $viewModel.showBottomSheet, backgroundColor: testAlbum.avgColor) {
+                AlbumModalView(album: Album.sampleData.first(where: {$0.name == viewModel.albumTitle}) ?? testAlbum)
             }
         }
     }
 }
 
 struct ARViewContainer: UIViewRepresentable {
-    
     let arView = ARView(frame: .init(x: 1, y: 1, width: 1, height: 1), cameraMode: .ar, automaticallyConfigureSession: false)
+    
     @Binding var albumTitle: String
     @Binding var showBottomSheet: Bool
     
