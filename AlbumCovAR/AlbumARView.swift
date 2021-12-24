@@ -17,11 +17,13 @@ class AlbumARViewViewModel : ObservableObject {
 struct AlbumARView : View {
     @StateObject var viewModel = AlbumARViewViewModel()
     
+    @Binding var recentAlbums: [Album]
+    
     let testAlbum = Album.sampleData[2]
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            ARViewContainer(albumTitle: $viewModel.albumTitle, showBottomSheet: $viewModel.showBottomSheet).edgesIgnoringSafeArea(.all)
+            ARViewContainer(albumTitle: $viewModel.albumTitle, showBottomSheet: $viewModel.showBottomSheet, recentAlbums: $recentAlbums).edgesIgnoringSafeArea(.all)
             
             Button(action: {
                 withAnimation {
@@ -45,9 +47,10 @@ struct ARViewContainer: UIViewRepresentable {
     
     @Binding var albumTitle: String
     @Binding var showBottomSheet: Bool
+    @Binding var recentAlbums: [Album]
     
     func makeCoordinator() -> Coordinator {
-        Coordinator(arView: arView, albumTitle: $albumTitle, showBottomSheetState: $showBottomSheet)
+        Coordinator(arView: arView, albumTitle: $albumTitle, showBottomSheetState: $showBottomSheet, recentAlbums: $recentAlbums)
     }
     
     func makeUIView(context: Context) -> ARView {
@@ -77,13 +80,14 @@ struct ARViewContainer: UIViewRepresentable {
         
         let arView: ARView!
         @Binding var albumTitle: String
-        
         @Binding var showBottomSheet: Bool
+        @Binding var recentAlbums: [Album]
         
-        init(arView: ARView, albumTitle: Binding<String>, showBottomSheetState: Binding<Bool>) {
+        init(arView: ARView, albumTitle: Binding<String>, showBottomSheetState: Binding<Bool>, recentAlbums: Binding<[Album]>) {
             self.arView = arView
             _albumTitle = albumTitle
             _showBottomSheet = showBottomSheetState
+            _recentAlbums = recentAlbums
         }
         
         @objc func handleTap(recognizer: UITapGestureRecognizer) {
@@ -92,6 +96,7 @@ struct ARViewContainer: UIViewRepresentable {
             if let tappedEntity = arView.entity(at: location) {
                 showBottomSheet = true
                 albumTitle = tappedEntity.name
+                recentAlbums.append(Album.sampleData.first(where: {$0.name == albumTitle}) ?? Album.sampleData[0])
                 print("UPDATE: Found album: \(tappedEntity.name)")
                 
             }
@@ -133,12 +138,3 @@ struct ARViewContainer: UIViewRepresentable {
         }
     }
 }
-
-
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
-    static var previews: some View {
-        AlbumARView()
-    }
-}
-#endif

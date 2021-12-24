@@ -9,7 +9,8 @@ import SwiftUI
 
 struct HomeView: View {
     
-    let recentAlbums: [Album] = Album.sampleData
+    @Binding var recentAlbums: [Album]
+    
     
     var body: some View {
         ZStack {
@@ -17,7 +18,20 @@ struct HomeView: View {
             VStack{
                 HeaderView()
                 
-                CenterView()
+                VStack {
+                    NavigationLink(destination: AlbumARView(recentAlbums: $recentAlbums)){
+                        VStack {
+                            Image(systemName: "camera")
+                                .font(.system(size: 24))
+                                .frame(width: 56, height: 56)
+                                .foregroundColor(Color("CustomYellow"))
+                                .background(Color("CustomBlue"))
+                                .clipShape(Circle())
+                            Text("Start scanning")
+                        }
+                        .padding()
+                    }
+                }
                 
                 Spacer()
                 
@@ -31,7 +45,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(recentAlbums: .constant(Album.sampleData))
     }
 }
 
