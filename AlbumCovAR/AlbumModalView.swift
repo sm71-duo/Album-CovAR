@@ -51,9 +51,12 @@ struct AlbumModalView: View {
                 HStack {
                     Text(album.artist).font(.title2).foregroundColor(Color("White"))
                     Spacer()
-                    Image(systemName: "music.note")
-                        .font(.system(size: 24))
-                        .foregroundColor(Color("White"))
+                    
+                    Link(destination: URL(string: "https://open.spotify.com/album/\(album.spotifyUri)")!) {
+                        Image("spotifyIcon")
+                            .resizable()
+                            .frame(width: 32, height: 32)
+                    }
                     
                 }
                 
