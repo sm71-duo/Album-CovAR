@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct AlbumCovarApp: App {
     
-    @State private var recentAlbums: [Album] =  []
+    @State private var recentAlbums: [Album] =  Album.sampleData
     
     var body: some Scene {
         WindowGroup {

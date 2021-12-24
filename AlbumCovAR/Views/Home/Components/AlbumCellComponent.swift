@@ -30,11 +30,13 @@ struct AlbumCellComponent: View {
             }
             
             Spacer()
+            NavigationLink(destination: AlbumView(album: album)){
+                Image(systemName: "chevron.right")
+                    .font(.system(size: 24))
+                    .frame(width: 56, height: 56)
+                    .foregroundColor(Color("White"))
+            }
             
-            Image(systemName: "chevron.right")
-                .font(.system(size: 24))
-                .frame(width: 56, height: 56)
-                .foregroundColor(Color("White"))
         }
         .padding(.horizontal)
         .listRowBackground(Color("BackgroundColor"))
