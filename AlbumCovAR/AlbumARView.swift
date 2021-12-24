@@ -25,16 +25,6 @@ struct AlbumARView : View {
         ZStack(alignment: .bottomLeading) {
             ARViewContainer(currentAlbum: $viewModel.currentAlbum, showBottomSheet: $viewModel.showBottomSheet, recentAlbums: $recentAlbums).edgesIgnoringSafeArea(.all)
             
-            Button(action: {
-                withAnimation {
-                    self.viewModel.showBottomSheet.toggle()
-                }
-            }) {
-                Text("\(viewModel.currentAlbum.name)")
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.black)
-            }
             BottomSheetModal(display: $viewModel.showBottomSheet, backgroundColor: viewModel.currentAlbum.avgColor) {
                 AlbumModalView(album: viewModel.currentAlbum)
             }
@@ -94,7 +84,9 @@ struct ARViewContainer: UIViewRepresentable {
             let location = recognizer.location(in: arView)
             
             if let tappedEntity = arView.entity(at: location) {
-                showBottomSheet = true
+                withAnimation{
+                    showBottomSheet = true
+                }
                 currentAlbum = Album.sampleData.first(where: {$0.name == tappedEntity.name}) ?? Album.sampleData[0]
                 recentAlbums.append(currentAlbum)
                 print("UPDATE: Found album: \(tappedEntity.name)")
