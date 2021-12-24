@@ -15,6 +15,7 @@ struct Album: Identifiable {
     var coverImageName: String
     var avgColorHex: String
     var avgColor: Color
+    var contrastColor: Color
     var spotifyUri: String
     var tracklist: Tracklist
     
@@ -24,6 +25,7 @@ struct Album: Identifiable {
         self.coverImageName = coverImageName
         self.avgColorHex = avgColorHex
         self.avgColor = hexStringToUIColor(hex: avgColorHex)
+        self.contrastColor = contrastColorBasedonAvgColor(hexColor: avgColorHex)
         self.spotifyUri = spotifyUri
         self.tracklist = tracklist
     }
@@ -31,23 +33,46 @@ struct Album: Identifiable {
 
 func hexStringToUIColor (hex:String) -> Color {
     var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
-
+    
     if (cString.hasPrefix("#")) {
         cString.remove(at: cString.startIndex)
     }
-
+    
     if ((cString.count) != 6) {
         return Color.gray
     }
-
+    
     var rgbValue:UInt64 = 0
     Scanner(string: cString).scanHexInt64(&rgbValue)
-
+    
     return Color(
         red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
         green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
         blue: CGFloat(rgbValue & 0x0000FF) / 255.0
     )
+}
+
+func contrastColorBasedonAvgColor (hexColor: String) -> Color {
+    
+    var cString:String = hexColor.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
+    
+    if (cString.hasPrefix("#")) {
+        cString.remove(at: cString.startIndex)
+    }
+    
+    if ((cString.count) != 6) {
+        return Color.gray
+    }
+    
+    var rgbValue:UInt64 = 0
+    Scanner(string: cString).scanHexInt64(&rgbValue)
+    
+    let red = CGFloat((rgbValue & 0xFF0000) >> 16)
+    let green =  CGFloat((rgbValue & 0x00FF00) >> 8)
+    let blue = CGFloat(rgbValue & 0x0000FF)
+    
+    return (((red * 0.299) + (green * 0.587) + (blue * 0.114)) > 186) ?
+    Color("Black") : Color("White");
 }
 
 extension Album {

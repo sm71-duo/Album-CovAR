@@ -11,6 +11,8 @@
 		14784ACE27747F750071E1D2 /* Tracklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14784ACD27747F750071E1D2 /* Tracklist.swift */; };
 		14784AD027749DC90071E1D2 /* AlbumModalComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14784ACF27749DC90071E1D2 /* AlbumModalComponent.swift */; };
 		1498E0D827761B4400B3BDF2 /* ARViewContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498E0D727761B4400B3BDF2 /* ARViewContainer.swift */; };
+		1498E0DB27761BF200B3BDF2 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498E0DA27761BF200B3BDF2 /* AlbumView.swift */; };
+		1498E0DE27761CB800B3BDF2 /* AlbumBackgroundComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1498E0DD27761CB800B3BDF2 /* AlbumBackgroundComponent.swift */; };
 		14EB030E277320DA00E9C5C9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB030D277320DA00E9C5C9 /* HomeView.swift */; };
 		14EB03112773322800E9C5C9 /* HeaderComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB03102773322800E9C5C9 /* HeaderComponent.swift */; };
 		14EB03152773383400E9C5C9 /* BottomComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB03142773383400E9C5C9 /* BottomComponent.swift */; };
@@ -28,6 +30,8 @@
 		14784ACD27747F750071E1D2 /* Tracklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracklist.swift; sourceTree = "<group>"; };
 		14784ACF27749DC90071E1D2 /* AlbumModalComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModalComponent.swift; sourceTree = "<group>"; };
 		1498E0D727761B4400B3BDF2 /* ARViewContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewContainer.swift; sourceTree = "<group>"; };
+		1498E0DA27761BF200B3BDF2 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
+		1498E0DD27761CB800B3BDF2 /* AlbumBackgroundComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumBackgroundComponent.swift; sourceTree = "<group>"; };
 		14EB030D277320DA00E9C5C9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		14EB03102773322800E9C5C9 /* HeaderComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderComponent.swift; sourceTree = "<group>"; };
 		14EB03142773383400E9C5C9 /* BottomComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomComponent.swift; sourceTree = "<group>"; };
@@ -80,9 +84,27 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		1498E0D927761BE300B3BDF2 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				1498E0DC27761CA000B3BDF2 /* Components */,
+				1498E0DA27761BF200B3BDF2 /* AlbumView.swift */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		1498E0DC27761CA000B3BDF2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1498E0DD27761CB800B3BDF2 /* AlbumBackgroundComponent.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		14EB030F2773316A00E9C5C9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1498E0D927761BE300B3BDF2 /* Album */,
 				1498E0D427761A4700B3BDF2 /* AlbumAR */,
 				A5A5D98E27747B1200E01A7E /* Home */,
 			);
@@ -223,12 +245,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1498E0DB27761BF200B3BDF2 /* AlbumView.swift in Sources */,
 				14784ACC27747F680071E1D2 /* Song.swift in Sources */,
 				14EB03112773322800E9C5C9 /* HeaderComponent.swift in Sources */,
 				14EB031C2773625800E9C5C9 /* AlbumCovarApp.swift in Sources */,
 				14784ACE27747F750071E1D2 /* Tracklist.swift in Sources */,
 				14EB031727733EDE00E9C5C9 /* AlbumCellComponent.swift in Sources */,
 				1498E0D827761B4400B3BDF2 /* ARViewContainer.swift in Sources */,
+				1498E0DE27761CB800B3BDF2 /* AlbumBackgroundComponent.swift in Sources */,
 				A530FB4C276895C900553800 /* AlbumARView.swift in Sources */,
 				A5A5D98D27747A8900E01A7E /* BottomSheetModal.swift in Sources */,
 				14784AD027749DC90071E1D2 /* AlbumModalComponent.swift in Sources */,
