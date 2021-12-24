@@ -16,7 +16,7 @@ struct HomeView: View {
         ZStack {
             Color("BackgroundColor").ignoresSafeArea()
             VStack{
-                HeaderView()
+                HeaderComponent()
                 
                 VStack {
                     NavigationLink(destination: AlbumARView(recentAlbums: $recentAlbums)){
@@ -35,7 +35,7 @@ struct HomeView: View {
                 
                 Spacer()
                 
-                BottomView(albums: recentAlbums)
+                BottomComponent(albums: recentAlbums)
             }
         }
         .navigationBarTitle("")

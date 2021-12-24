@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AlbumModalView: View {
+struct AlbumModalComponent: View {
     
     var album: Album
     
@@ -67,6 +67,6 @@ struct AlbumModalView: View {
 
 struct AlbumModalView_Previews: PreviewProvider {
     static var previews: some View {
-        AlbumModalView(album: Album.sampleData[1])
+        AlbumModalComponent(album: Album.sampleData[1])
     }
 }

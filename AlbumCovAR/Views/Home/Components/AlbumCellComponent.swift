@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct AlbumComponentView: View {
+struct AlbumCellComponent: View {
     
     var album: Album
     
@@ -46,7 +46,7 @@ struct AlbumComponentView_Previews: PreviewProvider {
         ZStack {
             Color("BackgroundColor").ignoresSafeArea()
             VStack {
-                AlbumComponentView(album: Album.sampleData[0])
+                AlbumCellComponent(album: Album.sampleData[0])
             }
         }
     }

@@ -9,7 +9,7 @@ import SwiftUI
 
 let gradientBorder = LinearGradient(gradient: Gradient(colors: [Color("CustomBlue"), Color("CustomLightBlue").opacity(0.0)]), startPoint: .top, endPoint: .bottom)
 
-struct BottomView: View {
+struct BottomComponent: View {
     
     var albums: [Album] = []
     
@@ -34,7 +34,7 @@ struct BottomView: View {
             } else {
                 ScrollView{
                     ForEach(albums) {album in
-                        AlbumComponentView(album: album)
+                        AlbumCellComponent(album: album)
                     }
                     .listStyle(.plain)
                 }
@@ -56,7 +56,7 @@ struct BottomView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack {
             Color("BackgroundColor").ignoresSafeArea()
-            BottomView()
+            BottomComponent()
         }
     }
 }

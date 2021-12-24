@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct HeaderView: View {
+struct HeaderComponent: View {
     var body: some View {
         VStack {
             Text("Album covAR")
@@ -36,7 +36,7 @@ struct HeaderView_Previews: PreviewProvider {
             
         
         Color("BackgroundColor").ignoresSafeArea()
-        HeaderView()
+        HeaderComponent()
         }
     }
 }
