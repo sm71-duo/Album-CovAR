@@ -25,13 +25,22 @@ struct BottomView: View {
                 Spacer()
             }
             
-            ScrollView{
-                ForEach(albums) {album in
-                    AlbumComponentView(album: album)
+            if albums.isEmpty {
+                HStack {
+                    Text("No recent albums").padding()
+                    
+                    Spacer()
                 }
-                .listStyle(.plain)
+            } else {
+                ScrollView{
+                    ForEach(albums) {album in
+                        AlbumComponentView(album: album)
+                    }
+                    .listStyle(.plain)
+                }
+                .frame(height: 150)
             }
-            .frame(height: 150)
+            
             
         }
         .padding(.vertical)

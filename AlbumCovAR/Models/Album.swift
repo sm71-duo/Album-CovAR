@@ -567,7 +567,7 @@ extension Album {
             )
         ),
         Album(
-            name: "Hi This Is Flume (Mixtape)",
+            name: "Hi This Is Flume",
             artist: "Flume",
             coverImageName: "Hi This Is Flume Cover",
             avgColorHex: "7f6e48",
