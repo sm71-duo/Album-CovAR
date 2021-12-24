@@ -15,14 +15,16 @@ struct Album: Identifiable {
     var coverImageName: String
     var avgColorHex: String
     var avgColor: Color
+    var spotifyUri: String
     var tracklist: Tracklist
     
-    init(name: String, artist: String, coverImageName: String, avgColorHex: String, tracklist: Tracklist) {
+    init(name: String, artist: String, coverImageName: String, avgColorHex: String, spotifyUri: String, tracklist: Tracklist) {
         self.name = name
         self.artist = artist
         self.coverImageName = coverImageName
         self.avgColorHex = avgColorHex
         self.avgColor = hexStringToUIColor(hex: avgColorHex)
+        self.spotifyUri = spotifyUri
         self.tracklist = tracklist
     }
 }
@@ -56,6 +58,7 @@ extension Album {
             artist: "Tyler, the Creator",
             coverImageName: "Flower Boy Cover",
             avgColorHex: "#B67022",
+            spotifyUri: "2nkto6YNI4rUYTLqEwWJ3o?si",
             tracklist: Tracklist(
                 songs: [
                     Song(
@@ -136,6 +139,7 @@ extension Album {
             artist: "Balthazar",
             coverImageName: "Sand Cover",
             avgColorHex: "#9A9A99",
+            spotifyUri: "0aYwzFnbFur2SEyJKKS0LD",
             tracklist: Tracklist(
                 songs: [
                     Song(
@@ -201,6 +205,7 @@ extension Album {
             artist: "Flume",
             coverImageName: "Skin Cover",
             avgColorHex: "#A67CA7",
+            spotifyUri: "1sxqYNzozsrgu0Vh6jQ6Lr",
             tracklist: Tracklist(
                 songs: [
                     Song(
@@ -291,6 +296,7 @@ extension Album {
             artist: "Kendrick Lamar",
             coverImageName: "DAMN. Cover",
             avgColorHex: "#95717d",
+            spotifyUri: "4eLPsYPBmXABThSJ821sqY",
             tracklist: Tracklist(
                 songs: [
                     Song(
@@ -371,6 +377,7 @@ extension Album {
             artist: "Jungle",
             coverImageName: "For Ever Cover",
             avgColorHex: "#d6a13a",
+            spotifyUri: "5gYCZgmXzzWXxOCb9fMfBm",
             tracklist: Tracklist(
                 songs: [
                     Song(
@@ -446,6 +453,7 @@ extension Album {
             artist: "Jungle",
             coverImageName: "Loving In Stereo Cover",
             avgColorHex: "#ccc3b5",
+            spotifyUri: "1hykVcbmenjAoG7wwoXmCV",
             tracklist: Tracklist(
                 songs: [
                     Song(
@@ -526,6 +534,7 @@ extension Album {
             artist: "KIDS SEE GHOSTS",
             coverImageName: "KIDS SEE GHOSTS Cover",
             avgColorHex: "#af9691",
+            spotifyUri: "6pwuKxMUkNg673KETsXPUV",
             tracklist: Tracklist(
                 songs: [
                     Song(
@@ -571,6 +580,7 @@ extension Album {
             artist: "Flume",
             coverImageName: "Hi This Is Flume Cover",
             avgColorHex: "7f6e48",
+            spotifyUri: "2Vx9FC6Um8i6kEtY7HNswB",
             tracklist: Tracklist(
                 songs: [
                     Song(
