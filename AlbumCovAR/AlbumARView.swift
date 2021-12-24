@@ -11,7 +11,7 @@ import ARKit
 
 class AlbumARViewViewModel : ObservableObject {
     @Published var showBottomSheet: Bool = false
-    @Published var albumTitle: String = ""
+    @Published var currentAlbum: Album = Album.sampleData[0]
 }
 
 struct AlbumARView : View {
@@ -23,20 +23,20 @@ struct AlbumARView : View {
     
     var body: some View {
         ZStack(alignment: .bottomLeading) {
-            ARViewContainer(albumTitle: $viewModel.albumTitle, showBottomSheet: $viewModel.showBottomSheet, recentAlbums: $recentAlbums).edgesIgnoringSafeArea(.all)
+            ARViewContainer(currentAlbum: $viewModel.currentAlbum, showBottomSheet: $viewModel.showBottomSheet, recentAlbums: $recentAlbums).edgesIgnoringSafeArea(.all)
             
             Button(action: {
                 withAnimation {
                     self.viewModel.showBottomSheet.toggle()
                 }
             }) {
-                Text("\(viewModel.albumTitle)")
+                Text("\(viewModel.currentAlbum.name)")
                     .font(.title)
                     .bold()
                     .foregroundColor(.black)
             }
-            BottomSheetModal(display: $viewModel.showBottomSheet, backgroundColor: testAlbum.avgColor) {
-                AlbumModalView(album: Album.sampleData.first(where: {$0.name == viewModel.albumTitle}) ?? testAlbum)
+            BottomSheetModal(display: $viewModel.showBottomSheet, backgroundColor: viewModel.currentAlbum.avgColor) {
+                AlbumModalView(album: viewModel.currentAlbum)
             }
         }
     }
@@ -45,12 +45,12 @@ struct AlbumARView : View {
 struct ARViewContainer: UIViewRepresentable {
     let arView = ARView(frame: .init(x: 1, y: 1, width: 1, height: 1), cameraMode: .ar, automaticallyConfigureSession: false)
     
-    @Binding var albumTitle: String
+    @Binding var currentAlbum: Album
     @Binding var showBottomSheet: Bool
     @Binding var recentAlbums: [Album]
     
     func makeCoordinator() -> Coordinator {
-        Coordinator(arView: arView, albumTitle: $albumTitle, showBottomSheetState: $showBottomSheet, recentAlbums: $recentAlbums)
+        Coordinator(arView: arView, currentAlbum: $currentAlbum, showBottomSheetState: $showBottomSheet, recentAlbums: $recentAlbums)
     }
     
     func makeUIView(context: Context) -> ARView {
@@ -79,13 +79,13 @@ struct ARViewContainer: UIViewRepresentable {
     class Coordinator: NSObject, ARSessionDelegate {
         
         let arView: ARView!
-        @Binding var albumTitle: String
+        @Binding var currentAlbum: Album
         @Binding var showBottomSheet: Bool
         @Binding var recentAlbums: [Album]
         
-        init(arView: ARView, albumTitle: Binding<String>, showBottomSheetState: Binding<Bool>, recentAlbums: Binding<[Album]>) {
+        init(arView: ARView, currentAlbum: Binding<Album>, showBottomSheetState: Binding<Bool>, recentAlbums: Binding<[Album]>) {
             self.arView = arView
-            _albumTitle = albumTitle
+            _currentAlbum = currentAlbum
             _showBottomSheet = showBottomSheetState
             _recentAlbums = recentAlbums
         }
@@ -95,8 +95,8 @@ struct ARViewContainer: UIViewRepresentable {
             
             if let tappedEntity = arView.entity(at: location) {
                 showBottomSheet = true
-                albumTitle = tappedEntity.name
-                recentAlbums.append(Album.sampleData.first(where: {$0.name == albumTitle}) ?? Album.sampleData[0])
+                currentAlbum = Album.sampleData.first(where: {$0.name == tappedEntity.name}) ?? Album.sampleData[0]
+                recentAlbums.append(currentAlbum)
                 print("UPDATE: Found album: \(tappedEntity.name)")
                 
             }
