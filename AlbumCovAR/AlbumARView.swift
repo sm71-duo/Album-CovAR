@@ -73,9 +73,9 @@ struct ARViewContainer: UIViewRepresentable {
         
         let arView: ARView!
         @Binding var albumTitle: String
-
+        
         @Binding var showBottomSheet: Bool
-
+        
         init(arView: ARView, albumTitle: Binding<String>, showBottomSheetState: Binding<Bool>) {
             self.arView = arView
             _albumTitle = albumTitle
@@ -89,7 +89,7 @@ struct ARViewContainer: UIViewRepresentable {
                 showBottomSheet = true
                 albumTitle = tappedEntity.name
                 print("UPDATE: Found album: \(tappedEntity.name)")
-
+                
             }
         }
         
@@ -106,15 +106,9 @@ struct ARViewContainer: UIViewRepresentable {
                     albumOverlay.color = try! .init( texture: .init(.load(named: "\(anchor.name ?? "help") Cover", in: nil)))
                     let albumEntity = ModelEntity(mesh: .generatePlane(width: width * 1.1, depth: height * 1.1, cornerRadius: 0.01), materials: [albumOverlay])
                     albumEntity.name = anchor.name ?? "'no name found'"
-                    //                    albumEntity.generateCollisionShapes(recursive: true)
+                    albumEntity.generateCollisionShapes(recursive: true)
                     
-                    let pressable = SimpleMaterial(color: .lightGray.withAlphaComponent(0.0), isMetallic: true)
-                    let pressableEntity = ModelEntity(mesh: .generatePlane(width: width / 4, depth: height / 4, cornerRadius: 9999), materials: [pressable])
-                    pressableEntity.generateCollisionShapes(recursive: true)
-                    pressableEntity.name = anchor.name ?? "'no name found'"
-                    pressableEntity.setPosition(SIMD3<Float>(0, 0.05, 0), relativeTo: anchorEntity)
                     
-                    anchorEntity.addChild(pressableEntity)
                     anchorEntity.addChild(albumEntity)
                     arView.scene.addAnchor(anchorEntity)
                     

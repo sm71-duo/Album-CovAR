@@ -13,7 +13,9 @@ struct AlbumCovarApp: App {
     
     var body: some Scene {
         WindowGroup {
-            AlbumARView()
+            NavigationView {
+                HomeView()
+            }
         }
     }
 }
