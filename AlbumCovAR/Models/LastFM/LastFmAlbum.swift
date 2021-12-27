@@ -12,11 +12,11 @@ struct LastFmAlbum: Identifiable {
     var artist: String
     var mbid: String
     var image: [LastFmImage]
-    var tracks: [LastFmTrack]
+    var tracks: [Track]
     var name: String
     var url: String
     
-    init(artist: String, mbid: String, image: [LastFmImage], tracks: [LastFmTrack], name: String, url: String) {
+    init(artist: String, mbid: String, image: [LastFmImage], tracks: [Track], name: String, url: String) {
         self.artist = artist
         self.mbid = mbid
         self.image = image
@@ -50,7 +50,7 @@ extension LastFmAlbum: Codable {
         image = try values.decode([LastFmImage].self, forKey: .image)
         
         let tracklist = try values.nestedContainer(keyedBy: TracksKey.self, forKey: .tracks)
-        tracks = try tracklist.decode([LastFmTrack].self, forKey: .track)
+        tracks = try tracklist.decode([Track].self, forKey: .track)
     }
 }
 

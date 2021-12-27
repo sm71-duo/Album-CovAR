@@ -7,14 +7,14 @@
 
 import Foundation
 
-struct LastFmArtist: Identifiable {
+struct Artist: Identifiable {
     var id = UUID()
     var url: String
     var name: String
     var mbid: String
 }
 
-extension LastFmArtist: Codable {
+extension Artist: Codable {
     enum CodingKeys: String, CodingKey {
         case url
         case name
