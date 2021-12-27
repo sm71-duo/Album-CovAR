@@ -263,6 +263,7 @@
 				14EB030E277320DA00E9C5C9 /* HomeView.swift in Sources */,
 				14EB031A2773552B00E9C5C9 /* Album.swift in Sources */,
 				14EB03152773383400E9C5C9 /* BottomComponent.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
