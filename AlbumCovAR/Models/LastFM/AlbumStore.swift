@@ -109,6 +109,7 @@ class AlbumStore: Decodable, ObservableObject {
                 DispatchQueue.main.async {
                     self.album = self.parseJsonData(data: data)
                     print("[CHECK] \(self.parseJsonData(data: data).name)")
+                    print("[CHECK] \(self.parseJsonData(data: data).image[0].url)")
                     
                 }
             }

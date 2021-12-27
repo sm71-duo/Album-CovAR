@@ -67,10 +67,11 @@ struct ARViewContainer: UIViewRepresentable {
                 withAnimation{
                     showBottomSheet = true
                 }
-                currentAlbum = Album.sampleData.first(where: {$0.name == tappedEntity.name}) ?? Album.sampleData[0]
+                
+                currentAlbum = Album.sampleData.first(where: {$0.coverImageName == "\(tappedEntity.name) Cover"}) ?? Album.sampleData[0]
                 recentAlbums.append(currentAlbum)
                 
-                self.albumStore.fetchAlbumByARReferenceName(referenceName: tappedEntity.name)
+                albumStore.fetchAlbumByARReferenceName(referenceName: tappedEntity.name)
                 
                 print("UPDATE: Found album: \(tappedEntity.name)")
                 

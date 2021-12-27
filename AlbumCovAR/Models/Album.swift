@@ -81,7 +81,7 @@ extension Album {
         Album(
             name: "Flower Boy",
             artist: "Tyler, the Creator",
-            coverImageName: "Flower Boy Cover",
+            coverImageName: "Tyler, the Creator - Flower Boy Cover",
             avgColorHex: "#B67022",
             spotifyUri: "2nkto6YNI4rUYTLqEwWJ3o?si",
             tracklist: Tracklist(
@@ -162,7 +162,7 @@ extension Album {
         Album(
             name: "Sand",
             artist: "Balthazar",
-            coverImageName: "Sand Cover",
+            coverImageName: "Balthazar - Sand Cover",
             avgColorHex: "#9A9A99",
             spotifyUri: "0aYwzFnbFur2SEyJKKS0LD",
             tracklist: Tracklist(
@@ -228,7 +228,7 @@ extension Album {
         Album(
             name: "Skin",
             artist: "Flume",
-            coverImageName: "Skin Cover",
+            coverImageName: "Flume - Skin Cover",
             avgColorHex: "#A67CA7",
             spotifyUri: "1sxqYNzozsrgu0Vh6jQ6Lr",
             tracklist: Tracklist(
@@ -319,7 +319,7 @@ extension Album {
         Album(
             name: "DAMN.",
             artist: "Kendrick Lamar",
-            coverImageName: "DAMN. Cover",
+            coverImageName: "Kendrick Lamar - DAMN Cover",
             avgColorHex: "#95717d",
             spotifyUri: "4eLPsYPBmXABThSJ821sqY",
             tracklist: Tracklist(
@@ -400,7 +400,7 @@ extension Album {
         Album(
             name: "For Ever",
             artist: "Jungle",
-            coverImageName: "For Ever Cover",
+            coverImageName: "Jungle - For Ever Cover",
             avgColorHex: "#d6a13a",
             spotifyUri: "5gYCZgmXzzWXxOCb9fMfBm",
             tracklist: Tracklist(
@@ -476,7 +476,7 @@ extension Album {
         Album(
             name: "Loving In Stereo",
             artist: "Jungle",
-            coverImageName: "Loving In Stereo Cover",
+            coverImageName: "Jungle - Loving In Stereo Cover",
             avgColorHex: "#ccc3b5",
             spotifyUri: "1hykVcbmenjAoG7wwoXmCV",
             tracklist: Tracklist(
@@ -557,7 +557,7 @@ extension Album {
         Album(
             name: "KIDS SEE GHOSTS",
             artist: "KIDS SEE GHOSTS",
-            coverImageName: "KIDS SEE GHOSTS Cover",
+            coverImageName: "KIDS SEE GHOSTS - KIDS SEE GHOSTS Cover",
             avgColorHex: "#af9691",
             spotifyUri: "6pwuKxMUkNg673KETsXPUV",
             tracklist: Tracklist(
@@ -603,7 +603,7 @@ extension Album {
         Album(
             name: "Hi This Is Flume",
             artist: "Flume",
-            coverImageName: "Hi This Is Flume Cover",
+            coverImageName: "Flume - Hi This Is Flume Cover",
             avgColorHex: "7f6e48",
             spotifyUri: "2Vx9FC6Um8i6kEtY7HNswB",
             tracklist: Tracklist(
