@@ -11,16 +11,11 @@ struct HomeView: View {
     
     @Binding var recentAlbums: [Album]
     
-    let Test: String = ProcessInfo.processInfo.environment["LASTFM_API_KEY"] ?? "nope"
-    
-    
     var body: some View {
         ZStack {
             Color("BackgroundColor").ignoresSafeArea()
             VStack{
                 HeaderComponent()
-                
-                Text(Test)
                 
                 VStack {
                     NavigationLink(destination: AlbumARView(recentAlbums: $recentAlbums)){

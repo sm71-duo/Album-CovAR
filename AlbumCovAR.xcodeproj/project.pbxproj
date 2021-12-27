@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142331D32779E73000203100 /* AlbumStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142331D22779E73000203100 /* AlbumStore.swift */; };
+		142331D62779E8B400203100 /* LastFmAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142331D52779E8B400203100 /* LastFmAlbum.swift */; };
+		142331D82779EA0900203100 /* LastFmImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142331D72779EA0900203100 /* LastFmImage.swift */; };
+		142331DA2779EA5600203100 /* LastFmTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142331D92779EA5600203100 /* LastFmTrack.swift */; };
+		142331DC2779EB5400203100 /* LastFmArtist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142331DB2779EB5400203100 /* LastFmArtist.swift */; };
+		142331DE277A085A00203100 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142331DD277A085A00203100 /* Track.swift */; };
 		14784ACC27747F680071E1D2 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14784ACB27747F680071E1D2 /* Song.swift */; };
 		14784ACE27747F750071E1D2 /* Tracklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14784ACD27747F750071E1D2 /* Tracklist.swift */; };
 		14784AD027749DC90071E1D2 /* AlbumModalComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14784ACF27749DC90071E1D2 /* AlbumModalComponent.swift */; };
@@ -27,6 +33,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		142331D22779E73000203100 /* AlbumStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumStore.swift; sourceTree = "<group>"; };
+		142331D52779E8B400203100 /* LastFmAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastFmAlbum.swift; sourceTree = "<group>"; };
+		142331D72779EA0900203100 /* LastFmImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastFmImage.swift; sourceTree = "<group>"; };
+		142331D92779EA5600203100 /* LastFmTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastFmTrack.swift; sourceTree = "<group>"; };
+		142331DB2779EB5400203100 /* LastFmArtist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastFmArtist.swift; sourceTree = "<group>"; };
+		142331DD277A085A00203100 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		14784ACB27747F680071E1D2 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		14784ACD27747F750071E1D2 /* Tracklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracklist.swift; sourceTree = "<group>"; };
 		14784ACF27749DC90071E1D2 /* AlbumModalComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModalComponent.swift; sourceTree = "<group>"; };
@@ -58,6 +70,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		142331D42779E89600203100 /* LastFM */ = {
+			isa = PBXGroup;
+			children = (
+				142331D22779E73000203100 /* AlbumStore.swift */,
+				142331D52779E8B400203100 /* LastFmAlbum.swift */,
+				142331D72779EA0900203100 /* LastFmImage.swift */,
+				142331D92779EA5600203100 /* LastFmTrack.swift */,
+				142331DB2779EB5400203100 /* LastFmArtist.swift */,
+				142331DD277A085A00203100 /* Track.swift */,
+			);
+			path = LastFM;
+			sourceTree = "<group>";
+		};
 		1498E0D427761A4700B3BDF2 /* AlbumAR */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +142,7 @@
 		14EB03182773551E00E9C5C9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				142331D42779E89600203100 /* LastFM */,
 				14EB03192773552B00E9C5C9 /* Album.swift */,
 				14784ACB27747F680071E1D2 /* Song.swift */,
 				14784ACD27747F750071E1D2 /* Tracklist.swift */,
@@ -257,12 +283,18 @@
 				14EB031727733EDE00E9C5C9 /* AlbumCellComponent.swift in Sources */,
 				1498E0D827761B4400B3BDF2 /* ARViewContainer.swift in Sources */,
 				1498E0DE27761CB800B3BDF2 /* AlbumBackgroundComponent.swift in Sources */,
+				142331D32779E73000203100 /* AlbumStore.swift in Sources */,
+				142331D82779EA0900203100 /* LastFmImage.swift in Sources */,
+				142331DC2779EB5400203100 /* LastFmArtist.swift in Sources */,
+				142331D62779E8B400203100 /* LastFmAlbum.swift in Sources */,
 				A530FB4C276895C900553800 /* AlbumARView.swift in Sources */,
 				A5A5D98D27747A8900E01A7E /* BottomSheetModal.swift in Sources */,
 				14784AD027749DC90071E1D2 /* AlbumModalComponent.swift in Sources */,
 				14EB030E277320DA00E9C5C9 /* HomeView.swift in Sources */,
 				14EB031A2773552B00E9C5C9 /* Album.swift in Sources */,
+				142331DA2779EA5600203100 /* LastFmTrack.swift in Sources */,
 				14EB03152773383400E9C5C9 /* BottomComponent.swift in Sources */,
+				142331DE277A085A00203100 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
