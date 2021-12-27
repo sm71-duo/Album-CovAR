@@ -9,10 +9,13 @@ import SwiftUI
 
 @main
 struct AlbumCovarApp: App {
+    
+    @State private var recentAlbums: [Album] =  []
+    
     var body: some Scene {
         WindowGroup {
             NavigationView {
-                HomeView()
+                HomeView(recentAlbums: $recentAlbums)
             }
         }
     }
