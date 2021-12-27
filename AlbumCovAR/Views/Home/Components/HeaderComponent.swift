@@ -35,8 +35,6 @@ struct HeaderComponent: View {
                 .font(.title2)
                 .multilineTextAlignment(.center)
                 
-        }.onAppear() {
-            self.albumStore.fetchFetchAlbumByQuery(name: "skin", artist: "flume")
         }
     }
 }

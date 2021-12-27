@@ -9,6 +9,7 @@ import Foundation
 
 class AlbumStore: Decodable, ObservableObject {
     @Published var album: LastFmAlbum = LastFmAlbum.sampleAlbum
+    
     private static var lastFmURL = "https://ws.audioscrobbler.com/2.0/"
     private static var apiKey = ProcessInfo.processInfo.environment["LASTFM_API_KEY"] ?? "Env variable not found"
     
@@ -55,7 +56,7 @@ class AlbumStore: Decodable, ObservableObject {
         task.resume()
     }
     
-    func fetchFetchAlbumByQuery(name: String, artist: String) {
+    func fetchAlbumByQuery(name: String, artist: String) {
         
         guard let albumUrl = URL(string: "\(Self.lastFmURL)?method=album.getinfo&api_key=\(Self.apiKey)&artist=\(artist)&album=\(name)&format=json") else {
             return
@@ -72,6 +73,42 @@ class AlbumStore: Decodable, ObservableObject {
             if let data = data {
                 DispatchQueue.main.async {
                     self.album = self.parseJsonData(data: data)
+                    
+                }
+            }
+        })
+        
+        
+        print(self.album.name)
+        task.resume()
+    }
+    
+    func fetchAlbumByARReferenceName(referenceName: String) {
+        
+        var artist: String
+        var name: String
+        
+        let fullReferenceName = referenceName.components(separatedBy: " - ")
+        
+        artist = fullReferenceName[0].replacingOccurrences(of: " ", with: "+")
+        name = fullReferenceName[1].replacingOccurrences(of: " ", with: "+")
+        
+        guard let albumUrl = URL(string: Self.lastFmURL + "?method=album.getinfo&api_key=" + Self.apiKey + "&artist=" + artist + "&album=" + name + "&format=json") else {
+            return
+        }
+        
+        let request = URLRequest(url: albumUrl)
+        
+        let task = URLSession.shared.dataTask(with: request, completionHandler: {(data, response, error) -> Void in
+            if let error = error {
+                print("ERROR: \(error)")
+                return
+            }
+            
+            if let data = data {
+                DispatchQueue.main.async {
+                    self.album = self.parseJsonData(data: data)
+                    print("[CHECK] \(self.parseJsonData(data: data).name)")
                     
                 }
             }
