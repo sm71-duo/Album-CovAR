@@ -10,6 +10,7 @@ import SwiftUI
 struct AlbumModalComponent: View {
     
     var album: Album
+    @ObservedObject var albumStoreState: AlbumStore
     
     let uiscreen = UIScreen.main.bounds
     
@@ -27,7 +28,7 @@ struct AlbumModalComponent: View {
                    alignment: .center)
             VStack(alignment: .leading) {
                 HStack{
-                    Text(album.name)
+                    Text(albumStoreState.album.name)
                         .foregroundColor(album.contrastColor)
                         .font(.title)
                     Spacer()
@@ -38,9 +39,9 @@ struct AlbumModalComponent: View {
                 }
                 
                 ScrollView{
-                    ForEach(album.tracklist.songs) {song in
+                    ForEach(albumStoreState.album.tracks) {song in
                         HStack(alignment: .top) {
-                            Text("\(song.trackNumber).")
+                            Text("\(song.rank).")
                                 .foregroundColor(album.contrastColor)
                             Text(song.name)
                                 .foregroundColor(album.contrastColor)
@@ -51,7 +52,7 @@ struct AlbumModalComponent: View {
                 }                .frame(height: 250)
                 
                 HStack {
-                    Text(album.artist)
+                    Text(albumStoreState.album.artist)
                         .font(.title2)
                         .foregroundColor(album.contrastColor)
                     Spacer()
@@ -69,8 +70,8 @@ struct AlbumModalComponent: View {
     }
 }
 
-struct AlbumModalView_Previews: PreviewProvider {
-    static var previews: some View {
-        AlbumModalComponent(album: Album.sampleData[5])
-    }
-}
+//struct AlbumModalView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AlbumModalComponent(album: Album.sampleData[5])
+//    }
+//}

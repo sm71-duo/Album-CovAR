@@ -47,6 +47,7 @@ class AlbumStore: Decodable, ObservableObject {
                 print("[STORE] data: \(data)")
                 DispatchQueue.main.async {
                     self.album = self.parseJsonData(data: data)
+                    print("[STORE] test: \(self.parseJsonData(data: data).name)")
                     
                 }
             }
@@ -73,6 +74,7 @@ class AlbumStore: Decodable, ObservableObject {
             if let data = data {
                 DispatchQueue.main.async {
                     self.album = self.parseJsonData(data: data)
+                    print("[STORE] query: \(self.parseJsonData(data: data).name)")
                     
                 }
             }

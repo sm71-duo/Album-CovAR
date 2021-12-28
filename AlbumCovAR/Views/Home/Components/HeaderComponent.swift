@@ -9,9 +9,6 @@ import SwiftUI
 
 struct HeaderComponent: View {
     
-    
-    @ObservedObject var albumStore = AlbumStore()
-    
     var body: some View {
         VStack {
             Text("Album covAR")
@@ -29,12 +26,6 @@ struct HeaderComponent: View {
                 .foregroundColor(.white)
                 .font(.title2)
                 .multilineTextAlignment(.center)
-            Text(albumStore.album.name)
-                .fontWeight(.bold)
-                .foregroundColor(.white)
-                .font(.title2)
-                .multilineTextAlignment(.center)
-                
         }
     }
 }
