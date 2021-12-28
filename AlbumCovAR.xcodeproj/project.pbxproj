@@ -149,6 +149,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		14EB5FB8277B5B3200592565 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				14EB5FB5277B513700592565 /* UIImage+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		A530FB3D276895C900553800 = {
 			isa = PBXGroup;
 			children = (
@@ -168,13 +176,13 @@
 		A530FB48276895C900553800 /* AlbumCovAR */ = {
 			isa = PBXGroup;
 			children = (
+				14EB5FB8277B5B3200592565 /* Extensions */,
 				A5A5D98B27747A7300E01A7E /* Components */,
 				14EB03182773551E00E9C5C9 /* Models */,
 				14EB031B2773625800E9C5C9 /* AlbumCovarApp.swift */,
 				14EB030F2773316A00E9C5C9 /* Views */,
 				A530FB4F276895CB00553800 /* Assets.xcassets */,
 				A530FB51276895CB00553800 /* Preview Content */,
-				14EB5FB5277B513700592565 /* UIImage+Extension.swift */,
 			);
 			path = AlbumCovAR;
 			sourceTree = "<group>";
