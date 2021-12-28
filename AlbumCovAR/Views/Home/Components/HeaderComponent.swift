@@ -21,6 +21,7 @@ struct HeaderComponent: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 200, height: 200)
+            
             Text("Welcome Back!")
                 .fontWeight(.bold)
                 .foregroundColor(.white)
@@ -34,9 +35,9 @@ struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack{
             
-        
-        Color("BackgroundColor").ignoresSafeArea()
-        HeaderComponent()
+            
+            Color("BackgroundColor").ignoresSafeArea()
+            HeaderComponent()
         }
     }
 }

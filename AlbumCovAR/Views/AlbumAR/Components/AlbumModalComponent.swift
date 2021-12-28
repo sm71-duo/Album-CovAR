@@ -17,9 +17,11 @@ struct AlbumModalComponent: View {
     var body: some View {
         ZStack {
             ZStack {
-                Image(album.coverImageName)
-                    .resizable()
-                    .scaledToFit()
+                AsyncImage(url: URL(string: albumStoreState.album.image.last?.url ?? "")) { image in
+                    image.resizable()
+                } placeholder: {
+                    Color("Black")
+                }
                 
                 Rectangle().fill(LinearGradient(gradient: Gradient(colors: [album.avgColor, album.avgColor.opacity(0.0)]), startPoint: .init(x: 0.4, y: 0.4), endPoint: .trailing))
             }
