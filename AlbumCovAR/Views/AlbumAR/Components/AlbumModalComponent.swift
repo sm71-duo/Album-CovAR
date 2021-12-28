@@ -9,7 +9,6 @@ import SwiftUI
 
 struct AlbumModalComponent: View {
     
-    var album: Album
     @ObservedObject var albumStoreState: AlbumStore
     
     let uiscreen = UIScreen.main.bounds
@@ -23,7 +22,7 @@ struct AlbumModalComponent: View {
                     Color("Black")
                 }
                 
-                Rectangle().fill(LinearGradient(gradient: Gradient(colors: [album.avgColor, album.avgColor.opacity(0.0)]), startPoint: .init(x: 0.4, y: 0.4), endPoint: .trailing))
+                Rectangle().fill(LinearGradient(gradient: Gradient(colors: [albumStoreState.album.avgColor, albumStoreState.album.avgColor.opacity(0.0)]), startPoint: .init(x: 0.4, y: 0.4), endPoint: .trailing))
             }
             .frame(width: self.uiscreen.width,
                    height: self.uiscreen.width,
@@ -31,12 +30,10 @@ struct AlbumModalComponent: View {
             VStack(alignment: .leading) {
                 HStack{
                     Text(albumStoreState.album.name)
-                        .foregroundColor(album.contrastColor)
                         .font(.title)
                     Spacer()
                     Image(systemName: "xmark")
                         .font(.system(size: 24))
-                        .foregroundColor(album.contrastColor)
                     
                 }
                 
@@ -44,9 +41,7 @@ struct AlbumModalComponent: View {
                     ForEach(albumStoreState.album.tracks) {song in
                         HStack(alignment: .top) {
                             Text("\(song.rank).")
-                                .foregroundColor(album.contrastColor)
                             Text(song.name)
-                                .foregroundColor(album.contrastColor)
                             Spacer()
                             
                         }.padding(.vertical, 0.02)
@@ -56,10 +51,9 @@ struct AlbumModalComponent: View {
                 HStack {
                     Text(albumStoreState.album.artist)
                         .font(.title2)
-                        .foregroundColor(album.contrastColor)
                     Spacer()
                     
-                    Link(destination: URL(string: "https://open.spotify.com/album/\(album.spotifyUri)")!) {
+                    Link(destination: URL(string: "https://open.spotify.com/album/\(albumStoreState.album.url)")!) {
                         Image("spotifyIcon")
                             .resizable()
                             .frame(width: 32, height: 32)
@@ -68,6 +62,7 @@ struct AlbumModalComponent: View {
                 }
                 
             }.padding(.horizontal)
+                .foregroundColor(albumStoreState.album.contrastColor)
         }
     }
 }

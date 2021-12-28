@@ -25,6 +25,7 @@
 		14EB031727733EDE00E9C5C9 /* AlbumCellComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB031627733EDD00E9C5C9 /* AlbumCellComponent.swift */; };
 		14EB031A2773552B00E9C5C9 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB03192773552B00E9C5C9 /* Album.swift */; };
 		14EB031C2773625800E9C5C9 /* AlbumCovarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB031B2773625800E9C5C9 /* AlbumCovarApp.swift */; };
+		14EB5FB6277B513700592565 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB5FB5277B513700592565 /* UIImage+Extension.swift */; };
 		A530FB4C276895C900553800 /* AlbumARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530FB4B276895C900553800 /* AlbumARView.swift */; };
 		A530FB50276895CB00553800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A530FB4F276895CB00553800 /* Assets.xcassets */; };
 		A530FB53276895CB00553800 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A530FB52276895CB00553800 /* Preview Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		14EB031627733EDD00E9C5C9 /* AlbumCellComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCellComponent.swift; sourceTree = "<group>"; };
 		14EB03192773552B00E9C5C9 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		14EB031B2773625800E9C5C9 /* AlbumCovarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCovarApp.swift; sourceTree = "<group>"; };
+		14EB5FB5277B513700592565 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		A530FB46276895C900553800 /* Album CovAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Album CovAR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A530FB4B276895C900553800 /* AlbumARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumARView.swift; sourceTree = "<group>"; };
 		A530FB4F276895CB00553800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				14EB030F2773316A00E9C5C9 /* Views */,
 				A530FB4F276895CB00553800 /* Assets.xcassets */,
 				A530FB51276895CB00553800 /* Preview Content */,
+				14EB5FB5277B513700592565 /* UIImage+Extension.swift */,
 			);
 			path = AlbumCovAR;
 			sourceTree = "<group>";
@@ -286,6 +289,7 @@
 				142331D62779E8B400203100 /* LastFmAlbum.swift in Sources */,
 				A530FB4C276895C900553800 /* AlbumARView.swift in Sources */,
 				A5A5D98D27747A8900E01A7E /* BottomSheetModal.swift in Sources */,
+				14EB5FB6277B513700592565 /* UIImage+Extension.swift in Sources */,
 				14784AD027749DC90071E1D2 /* AlbumModalComponent.swift in Sources */,
 				14EB030E277320DA00E9C5C9 /* HomeView.swift in Sources */,
 				14EB031A2773552B00E9C5C9 /* Album.swift in Sources */,
