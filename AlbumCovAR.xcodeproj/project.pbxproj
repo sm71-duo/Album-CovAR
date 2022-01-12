@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		142331D32779E73000203100 /* AlbumStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142331D22779E73000203100 /* AlbumStore.swift */; };
+		142331D62779E8B400203100 /* LastFmAlbum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142331D52779E8B400203100 /* LastFmAlbum.swift */; };
+		142331D82779EA0900203100 /* LastFmImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142331D72779EA0900203100 /* LastFmImage.swift */; };
+		142331DA2779EA5600203100 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142331D92779EA5600203100 /* Track.swift */; };
+		142331DC2779EB5400203100 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 142331DB2779EB5400203100 /* Artist.swift */; };
 		14784ACC27747F680071E1D2 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14784ACB27747F680071E1D2 /* Song.swift */; };
 		14784ACE27747F750071E1D2 /* Tracklist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14784ACD27747F750071E1D2 /* Tracklist.swift */; };
 		14784AD027749DC90071E1D2 /* AlbumModalComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14784ACF27749DC90071E1D2 /* AlbumModalComponent.swift */; };
@@ -20,6 +25,7 @@
 		14EB031727733EDE00E9C5C9 /* AlbumCellComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB031627733EDD00E9C5C9 /* AlbumCellComponent.swift */; };
 		14EB031A2773552B00E9C5C9 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB03192773552B00E9C5C9 /* Album.swift */; };
 		14EB031C2773625800E9C5C9 /* AlbumCovarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB031B2773625800E9C5C9 /* AlbumCovarApp.swift */; };
+		14EB5FB6277B513700592565 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14EB5FB5277B513700592565 /* UIImage+Extension.swift */; };
 		A530FB4C276895C900553800 /* AlbumARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A530FB4B276895C900553800 /* AlbumARView.swift */; };
 		A530FB50276895CB00553800 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A530FB4F276895CB00553800 /* Assets.xcassets */; };
 		A530FB53276895CB00553800 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A530FB52276895CB00553800 /* Preview Assets.xcassets */; };
@@ -27,6 +33,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		142331D22779E73000203100 /* AlbumStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumStore.swift; sourceTree = "<group>"; };
+		142331D52779E8B400203100 /* LastFmAlbum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastFmAlbum.swift; sourceTree = "<group>"; };
+		142331D72779EA0900203100 /* LastFmImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastFmImage.swift; sourceTree = "<group>"; };
+		142331D92779EA5600203100 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		142331DB2779EB5400203100 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		14784ACB27747F680071E1D2 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		14784ACD27747F750071E1D2 /* Tracklist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracklist.swift; sourceTree = "<group>"; };
 		14784ACF27749DC90071E1D2 /* AlbumModalComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumModalComponent.swift; sourceTree = "<group>"; };
@@ -40,6 +51,7 @@
 		14EB031627733EDD00E9C5C9 /* AlbumCellComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCellComponent.swift; sourceTree = "<group>"; };
 		14EB03192773552B00E9C5C9 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		14EB031B2773625800E9C5C9 /* AlbumCovarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCovarApp.swift; sourceTree = "<group>"; };
+		14EB5FB5277B513700592565 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		A530FB46276895C900553800 /* Album CovAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Album CovAR.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A530FB4B276895C900553800 /* AlbumARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumARView.swift; sourceTree = "<group>"; };
 		A530FB4F276895CB00553800 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +70,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		142331D42779E89600203100 /* LastFM */ = {
+			isa = PBXGroup;
+			children = (
+				142331D22779E73000203100 /* AlbumStore.swift */,
+				142331D52779E8B400203100 /* LastFmAlbum.swift */,
+				142331D72779EA0900203100 /* LastFmImage.swift */,
+				142331D92779EA5600203100 /* Track.swift */,
+				142331DB2779EB5400203100 /* Artist.swift */,
+			);
+			path = LastFM;
+			sourceTree = "<group>";
+		};
 		1498E0D427761A4700B3BDF2 /* AlbumAR */ = {
 			isa = PBXGroup;
 			children = (
@@ -117,11 +141,20 @@
 		14EB03182773551E00E9C5C9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				142331D42779E89600203100 /* LastFM */,
 				14EB03192773552B00E9C5C9 /* Album.swift */,
 				14784ACB27747F680071E1D2 /* Song.swift */,
 				14784ACD27747F750071E1D2 /* Tracklist.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		14EB5FB8277B5B3200592565 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				14EB5FB5277B513700592565 /* UIImage+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A530FB3D276895C900553800 = {
@@ -143,6 +176,7 @@
 		A530FB48276895C900553800 /* AlbumCovAR */ = {
 			isa = PBXGroup;
 			children = (
+				14EB5FB8277B5B3200592565 /* Extensions */,
 				A5A5D98B27747A7300E01A7E /* Components */,
 				14EB03182773551E00E9C5C9 /* Models */,
 				14EB031B2773625800E9C5C9 /* AlbumCovarApp.swift */,
@@ -257,11 +291,17 @@
 				14EB031727733EDE00E9C5C9 /* AlbumCellComponent.swift in Sources */,
 				1498E0D827761B4400B3BDF2 /* ARViewContainer.swift in Sources */,
 				1498E0DE27761CB800B3BDF2 /* AlbumBackgroundComponent.swift in Sources */,
+				142331D32779E73000203100 /* AlbumStore.swift in Sources */,
+				142331D82779EA0900203100 /* LastFmImage.swift in Sources */,
+				142331DC2779EB5400203100 /* Artist.swift in Sources */,
+				142331D62779E8B400203100 /* LastFmAlbum.swift in Sources */,
 				A530FB4C276895C900553800 /* AlbumARView.swift in Sources */,
 				A5A5D98D27747A8900E01A7E /* BottomSheetModal.swift in Sources */,
+				14EB5FB6277B513700592565 /* UIImage+Extension.swift in Sources */,
 				14784AD027749DC90071E1D2 /* AlbumModalComponent.swift in Sources */,
 				14EB030E277320DA00E9C5C9 /* HomeView.swift in Sources */,
 				14EB031A2773552B00E9C5C9 /* Album.swift in Sources */,
+				142331DA2779EA5600203100 /* Track.swift in Sources */,
 				14EB03152773383400E9C5C9 /* BottomComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,7 +309,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		A530FB54276895CB00553800 /* Debug */ = {
+		142331C82779D97400203100 /* Debug (Production) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -328,9 +368,42 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = "Debug (Production)";
 		};
-		A530FB55276895CB00553800 /* Release */ = {
+		142331C92779D97400203100 /* Debug (Production) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AlbumCovAR/Preview Content\"";
+				DEVELOPMENT_TEAM = 42Q89H448D;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.royappledoorn.AlbumCovAR;
+				PRODUCT_NAME = "Album CovAR";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Debug (Production)";
+		};
+		142331CC2779DA0A00203100 /* Release (Production) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -383,9 +456,9 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "Release (Production)";
 		};
-		A530FB57276895CB00553800 /* Debug */ = {
+		142331CD2779DA0A00203100 /* Release (Production) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -416,9 +489,125 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Debug;
+			name = "Release (Production)";
 		};
-		A530FB58276895CB00553800 /* Release */ = {
+		A530FB54276895CB00553800 /* Debug (Development) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug (Development)";
+		};
+		A530FB55276895CB00553800 /* Release (Development) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release (Development)";
+		};
+		A530FB57276895CB00553800 /* Debug (Development) */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -449,7 +638,40 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
-			name = Release;
+			name = "Debug (Development)";
+		};
+		A530FB58276895CB00553800 /* Release (Development) */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AlbumCovAR/Preview Content\"";
+				DEVELOPMENT_TEAM = 42Q89H448D;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.royappledoorn.AlbumCovAR;
+				PRODUCT_NAME = "Album CovAR";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = "Release (Development)";
 		};
 /* End XCBuildConfiguration section */
 
@@ -457,20 +679,24 @@
 		A530FB41276895C900553800 /* Build configuration list for PBXProject "AlbumCovAR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A530FB54276895CB00553800 /* Debug */,
-				A530FB55276895CB00553800 /* Release */,
+				A530FB54276895CB00553800 /* Debug (Development) */,
+				142331C82779D97400203100 /* Debug (Production) */,
+				A530FB55276895CB00553800 /* Release (Development) */,
+				142331CC2779DA0A00203100 /* Release (Production) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Production)";
 		};
 		A530FB56276895CB00553800 /* Build configuration list for PBXNativeTarget "AlbumCovAR" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A530FB57276895CB00553800 /* Debug */,
-				A530FB58276895CB00553800 /* Release */,
+				A530FB57276895CB00553800 /* Debug (Development) */,
+				142331C92779D97400203100 /* Debug (Production) */,
+				A530FB58276895CB00553800 /* Release (Development) */,
+				142331CD2779DA0A00203100 /* Release (Production) */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release (Production)";
 		};
 /* End XCConfigurationList section */
 	};

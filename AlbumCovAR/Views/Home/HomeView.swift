@@ -11,7 +11,6 @@ struct HomeView: View {
     
     @Binding var recentAlbums: [Album]
     
-    
     var body: some View {
         ZStack {
             Color("BackgroundColor").ignoresSafeArea()

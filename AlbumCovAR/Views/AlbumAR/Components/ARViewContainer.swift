@@ -17,8 +17,10 @@ struct ARViewContainer: UIViewRepresentable {
     @Binding var showBottomSheet: Bool
     @Binding var recentAlbums: [Album]
     
+    @ObservedObject var albumStoreState: AlbumStore
+    
     func makeCoordinator() -> Coordinator {
-        Coordinator(arView: arView, currentAlbum: $currentAlbum, showBottomSheetState: $showBottomSheet, recentAlbums: $recentAlbums)
+        Coordinator(arView: arView, currentAlbum: $currentAlbum, showBottomSheetState: $showBottomSheet, recentAlbums: $recentAlbums, albumStoreState: albumStoreState)
     }
     
     func makeUIView(context: Context) -> ARView {
@@ -46,13 +48,16 @@ struct ARViewContainer: UIViewRepresentable {
     
     class Coordinator: NSObject, ARSessionDelegate {
         
+        @ObservedObject var albumStoreState: AlbumStore
+        
         let arView: ARView!
         @Binding var currentAlbum: Album
         @Binding var showBottomSheet: Bool
         @Binding var recentAlbums: [Album]
         
-        init(arView: ARView, currentAlbum: Binding<Album>, showBottomSheetState: Binding<Bool>, recentAlbums: Binding<[Album]>) {
+        init(arView: ARView, currentAlbum: Binding<Album>, showBottomSheetState: Binding<Bool>, recentAlbums: Binding<[Album]>, albumStoreState: AlbumStore) {
             self.arView = arView
+            self.albumStoreState = albumStoreState
             _currentAlbum = currentAlbum
             _showBottomSheet = showBottomSheetState
             _recentAlbums = recentAlbums
@@ -65,8 +70,12 @@ struct ARViewContainer: UIViewRepresentable {
                 withAnimation{
                     showBottomSheet = true
                 }
-                currentAlbum = Album.sampleData.first(where: {$0.name == tappedEntity.name}) ?? Album.sampleData[0]
+                
+                currentAlbum = Album.sampleData.first(where: {$0.coverImageName == "\(tappedEntity.name) Cover"}) ?? Album.sampleData[0]
                 recentAlbums.append(currentAlbum)
+                
+                albumStoreState.fetchAlbumByARReferenceName(referenceName: tappedEntity.name)
+                
                 print("UPDATE: Found album: \(tappedEntity.name)")
                 
             }

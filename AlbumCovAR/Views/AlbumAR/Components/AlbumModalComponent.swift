@@ -9,41 +9,39 @@ import SwiftUI
 
 struct AlbumModalComponent: View {
     
-    var album: Album
+    @ObservedObject var albumStoreState: AlbumStore
     
     let uiscreen = UIScreen.main.bounds
     
     var body: some View {
         ZStack {
             ZStack {
-                Image(album.coverImageName)
-                    .resizable()
-                    .scaledToFit()
+                AsyncImage(url: URL(string: albumStoreState.album.image.last?.url ?? "")) { image in
+                    image.resizable()
+                } placeholder: {
+                    Color("Black")
+                }
                 
-                Rectangle().fill(LinearGradient(gradient: Gradient(colors: [album.avgColor, album.avgColor.opacity(0.0)]), startPoint: .init(x: 0.4, y: 0.4), endPoint: .trailing))
+                Rectangle().fill(LinearGradient(gradient: Gradient(colors: [albumStoreState.album.avgColor, albumStoreState.album.avgColor.opacity(0.0)]), startPoint: .init(x: 0.4, y: 0.4), endPoint: .trailing))
             }
             .frame(width: self.uiscreen.width,
                    height: self.uiscreen.width,
                    alignment: .center)
             VStack(alignment: .leading) {
                 HStack{
-                    Text(album.name)
-                        .foregroundColor(album.contrastColor)
+                    Text(albumStoreState.album.name)
                         .font(.title)
                     Spacer()
                     Image(systemName: "xmark")
                         .font(.system(size: 24))
-                        .foregroundColor(album.contrastColor)
                     
                 }
                 
                 ScrollView{
-                    ForEach(album.tracklist.songs) {song in
+                    ForEach(albumStoreState.album.tracks) {song in
                         HStack(alignment: .top) {
-                            Text("\(song.trackNumber).")
-                                .foregroundColor(album.contrastColor)
+                            Text("\(song.rank).")
                             Text(song.name)
-                                .foregroundColor(album.contrastColor)
                             Spacer()
                             
                         }.padding(.vertical, 0.02)
@@ -51,12 +49,11 @@ struct AlbumModalComponent: View {
                 }                .frame(height: 250)
                 
                 HStack {
-                    Text(album.artist)
+                    Text(albumStoreState.album.artist)
                         .font(.title2)
-                        .foregroundColor(album.contrastColor)
                     Spacer()
                     
-                    Link(destination: URL(string: "https://open.spotify.com/album/\(album.spotifyUri)")!) {
+                    Link(destination: URL(string: "https://open.spotify.com/album/\(albumStoreState.album.url)")!) {
                         Image("spotifyIcon")
                             .resizable()
                             .frame(width: 32, height: 32)
@@ -65,12 +62,13 @@ struct AlbumModalComponent: View {
                 }
                 
             }.padding(.horizontal)
+                .foregroundColor(albumStoreState.album.contrastColor)
         }
     }
 }
 
-struct AlbumModalView_Previews: PreviewProvider {
-    static var previews: some View {
-        AlbumModalComponent(album: Album.sampleData[5])
-    }
-}
+//struct AlbumModalView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AlbumModalComponent(album: Album.sampleData[5])
+//    }
+//}

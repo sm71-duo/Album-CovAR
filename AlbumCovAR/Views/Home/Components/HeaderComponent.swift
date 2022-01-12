@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HeaderComponent: View {
+    
     var body: some View {
         VStack {
             Text("Album covAR")
@@ -20,12 +21,12 @@ struct HeaderComponent: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 200, height: 200)
+            
             Text("Welcome Back!")
                 .fontWeight(.bold)
                 .foregroundColor(.white)
                 .font(.title2)
                 .multilineTextAlignment(.center)
-                
         }
     }
 }
@@ -34,9 +35,9 @@ struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
         ZStack{
             
-        
-        Color("BackgroundColor").ignoresSafeArea()
-        HeaderComponent()
+            
+            Color("BackgroundColor").ignoresSafeArea()
+            HeaderComponent()
         }
     }
 }
