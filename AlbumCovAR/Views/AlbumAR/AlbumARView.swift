@@ -27,8 +27,8 @@ struct AlbumARView : View {
         ZStack(alignment: .bottomLeading) {
             ARViewContainer(currentAlbum: $viewModel.currentAlbum, showBottomSheet: $viewModel.showBottomSheet, recentAlbums: $recentAlbums, albumStoreState: albumStoreState).edgesIgnoringSafeArea(.all)
             
-            BottomSheetModal(display: $viewModel.showBottomSheet, backgroundColor: viewModel.currentAlbum.avgColor, indicatorColor: viewModel.currentAlbum.contrastColor) {
-                AlbumModalComponent(album: viewModel.currentAlbum, albumStoreState: albumStoreState)
+            BottomSheetModal(display: $viewModel.showBottomSheet, backgroundColor: albumStoreState.album.avgColor, indicatorColor: albumStoreState.album.contrastColor) {
+                AlbumModalComponent( albumStoreState: albumStoreState)
             }
         }
     }
