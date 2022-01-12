@@ -29,16 +29,11 @@ struct LastFmAlbum: Identifiable {
         
         if(image.last != nil) {
             self.avgColor = setAverageColor(imageUrl: image.last?.url ?? "")
-        } else {
-            self.avgColor = Color("Black")
-        }
-        
-        if(image.last != nil) {
             self.contrastColor = setContrastColor(imageUrl: image.last?.url ?? "")
         } else {
+            self.avgColor = Color("Black")
             self.contrastColor = Color("Black")
         }
-        
     }
 }
 
