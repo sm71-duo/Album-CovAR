@@ -70,15 +70,12 @@ extension LastFmAlbum: Codable {
         
         if(image.last != nil) {
             avgColor = setAverageColor(imageUrl: image.last?.url ?? "")
-        } else {
-            avgColor = Color("Black")
-        }
-        
-        if(image.last != nil) {
             contrastColor = setContrastColor(imageUrl: image.last?.url ?? "")
         } else {
+            avgColor = Color("Black")
             contrastColor = Color("Black")
         }
+        
     }
 }
 
